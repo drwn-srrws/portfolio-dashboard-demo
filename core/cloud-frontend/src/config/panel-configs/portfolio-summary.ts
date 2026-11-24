@@ -1,0 +1,92 @@
+import { Orientation } from "dockview-react";
+import type { Config } from "../types";
+
+export const portfolioSummaryPagePanelConfig: Config["portfolioSummaryPagePanelConfig"] =
+  {
+    grid: {
+      root: {
+        type: "branch",
+        data: [
+          {
+            type: "leaf",
+            data: {
+              views: ["panel_1"],
+              activeView: "panel_1",
+              id: "1",
+            },
+            size: 1040.8507080078125,
+          },
+        ],
+        size: 697.515625,
+      },
+      width: 1558.671875,
+      height: 697.515625,
+      orientation: Orientation.HORIZONTAL,
+    },
+    panels: {
+      panel_1: {
+        id: "panel_1",
+        contentComponent: "PortfolioSummary",
+        tabComponent: "props.defaultTabComponent",
+        params: {
+          metrics: [
+            "company_security_code_portfolio_asset_class",
+            "cumulative_pnl",
+            "net_exposure",
+            "net_exposure_percent",
+            "company_netted_gmv",
+            "company_netted_gmv_percent_nav",
+            "quantity",
+            "company_subsector",
+            "primary_analyst_avatars",
+            "secondary_analyst_avatars",
+            "market_cap",
+            "days_to_cover",
+            "instrument_portfolio_asset_class",
+            "ownership_type",
+            "mtd_pnl",
+            "mtd_pnl_percent_nav",
+            "wtd_pnl",
+            "wtd_pnl_percent_nav",
+            "qtd_pnl",
+            "qtd_pnl_percent_nav",
+            "ytd_pnl",
+            "ytd_pnl_percent_nav",
+            "average_cost",
+            "native_average_cost",
+            "instrument_security_code",
+            "instrument_security_code_display",
+            "position_instrument_security_code",
+            "position_instrument_security_code_display",
+          ],
+          defaultMetrics: [
+            "net_exposure_percent",
+            "wtd_pnl_percent_nav",
+            "mtd_pnl_percent_nav",
+            "qtd_pnl_percent_nav",
+            "ytd_pnl_percent_nav",
+            "quantity",
+            "primary_analyst_avatars",
+            "secondary_analyst_avatars",
+            "average_cost",
+            "native_average_cost",
+          ],
+          groupByMetrics: [
+            "company_security_code_portfolio_asset_class",
+            "fund_name",
+            "direction",
+            "instrument_portfolio_asset_class",
+            "illiquid_private",
+            "market_cap",
+          ],
+          defaultGroupByMetric: "company_security_code_portfolio_asset_class",
+          defaultSubgroupBy: "company_security_code_portfolio_asset_class",
+          defaultSubgroupByFallback: "instrument_security_code",
+          defaultSortByMetric: "net_exposure_percent",
+          defaultSortDirection: "desc",
+        },
+        title: "panel_1",
+      },
+    },
+    activeGroup: "3",
+  };

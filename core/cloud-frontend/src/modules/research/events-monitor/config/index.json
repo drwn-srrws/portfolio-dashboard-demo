@@ -1,0 +1,36 @@
+{
+  "eventTrackerNewPagePanelConfig": {
+    "grid": {
+      "root": {
+        "type": "branch",
+        "data": [
+          {
+            "type": "leaf",
+            "data": {
+              "views": ["panel_1"],
+              "activeView": "panel_1",
+              "id": "1",
+              "locked": true,
+              "hideHeader": true
+            },
+            "size": 1
+          }
+        ],
+        "size": 697.515625
+      },
+      "width": 1558.671875,
+      "height": 697.515625,
+      "orientation": "HORIZONTAL"
+    },
+    "panels": {
+      "panel_1": {
+        "id": "panel_1",
+        "title": "AS Team Dashboard",
+        "contentComponent": "EventsMonitorTable",
+        "tabComponent": "props.defaultTabComponent",
+        "params": {}
+      }
+    },
+    "activeGroup": "1"
+  }
+}

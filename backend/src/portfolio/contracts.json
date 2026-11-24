@@ -1,0 +1,1600 @@
+{
+  "config": {
+    "fund-summary": {
+      "metadata": {
+        "supported_filters": [
+          "fund_id",
+          "primary_analyst",
+          "direction",
+          "company_security_code_portfolio_asset_class",
+          "company_security_code",
+          "company_subsector",
+          "fund_name",
+          "instrument_asset_class",
+          "instrument_portfolio_asset_class",
+          "secondary_analyst",
+          "instrument_group",
+          "instrument_name",
+          "instrument_security_code",
+          "position_instrument_name",
+          "position_instrument_asset_type",
+          "position_instrument_security_code",
+          "market_cap",
+          "portfolio_team",
+          "whale_minnow_tag",
+          "illiquid_private",
+          "company_netted_direction"
+        ],
+        "date_range": {
+          "start_date": null,
+          "end_date": null,
+          "period": "YTD"
+        },
+        "group_by_config": {
+          "selectable_dimensions": [],
+          "required_dimensions": []
+        },
+        "group_config_default": {
+          "selectable_dimensions": [],
+          "required_dimensions": []
+        },
+        "display_name_map": {
+          "fund_id": "Fund ID",
+          "primary_analyst": "1° Analyst",
+          "direction": "Direction",
+          "company_security_code_portfolio_asset_class": "Company Security Code Demo Asset Class",
+          "company_security_code": "Company Security Code",
+          "company_subsector": "Demo Subsector",
+          "fund_name": "Fund Name",
+          "instrument_asset_class": "Instrument Asset Class",
+          "instrument_portfolio_asset_class": "Demo Instrument Asset Class",
+          "secondary_analyst": "2° Analyst",
+          "instrument_group": "Investment Group",
+          "instrument_name": "Instrument Name",
+          "instrument_security_code": "Security Code",
+          "position_instrument_name": "Position Instrument Name",
+          "position_instrument_asset_type": "Position Instrument Asset Type",
+          "position_instrument_security_code": "Position Instrument Security Code",
+          "market_cap": "Market Cap",
+          "portfolio_team": "Demo Team",
+          "whale_minnow_tag": "Whale/Minnow",
+          "illiquid_private": "Illiquid Private",
+          "company_netted_direction": "Company Netted Direction"
+        }
+      }
+    },
+    "position-differences": {
+      "metadata": {
+        "supported_filters": [
+          "fund_id",
+          "primary_analyst",
+          "direction",
+          "company_security_code_portfolio_asset_class",
+          "company_security_code",
+          "company_subsector",
+          "fund_name",
+          "instrument_asset_class",
+          "instrument_portfolio_asset_class",
+          "secondary_analyst",
+          "instrument_group",
+          "instrument_name",
+          "instrument_security_code",
+          "position_instrument_name",
+          "position_instrument_asset_type",
+          "position_instrument_security_code",
+          "market_cap",
+          "portfolio_team",
+          "whale_minnow_tag",
+          "illiquid_private",
+          "company_netted_direction"
+        ],
+        "date_range": {
+          "start_date": null,
+          "end_date": null,
+          "period": "YTD"
+        },
+        "group_by_config": {
+          "selectable_dimensions": [],
+          "required_dimensions": []
+        },
+        "group_config_default": {
+          "selectable_dimensions": [],
+          "required_dimensions": []
+        },
+        "fund_combinations": [
+          {
+            "fund_1": "Northstar Capital",
+            "fund_2": "Harbor Ridge Partners"
+          },
+          {
+            "fund_1": "Harbor Ridge Partners",
+            "fund_2": "Northstar Capital"
+          }
+        ],
+        "display_name_map": {
+          "fund_id": "Fund ID",
+          "primary_analyst": "1° Analyst",
+          "direction": "Direction",
+          "company_security_code_portfolio_asset_class": "Company Security Code Demo Asset Class",
+          "company_security_code": "Company Security Code",
+          "company_subsector": "Demo Subsector",
+          "fund_name": "Fund Name",
+          "instrument_asset_class": "Instrument Asset Class",
+          "instrument_portfolio_asset_class": "Demo Instrument Asset Class",
+          "secondary_analyst": "2° Analyst",
+          "instrument_group": "Investment Group",
+          "instrument_name": "Instrument Name",
+          "instrument_security_code": "Security Code",
+          "position_instrument_name": "Position Instrument Name",
+          "position_instrument_asset_type": "Position Instrument Asset Type",
+          "position_instrument_security_code": "Position Instrument Security Code",
+          "market_cap": "Market Cap",
+          "portfolio_team": "Demo Team",
+          "whale_minnow_tag": "Whale/Minnow",
+          "illiquid_private": "Illiquid Private",
+          "company_netted_direction": "Company Netted Direction"
+        }
+      }
+    },
+    "market-cap-distribution": {
+      "metadata": {
+        "supported_filters": [
+          "fund_id",
+          "primary_analyst",
+          "direction",
+          "company_security_code_portfolio_asset_class",
+          "company_security_code",
+          "company_subsector",
+          "fund_name",
+          "instrument_asset_class",
+          "instrument_portfolio_asset_class",
+          "secondary_analyst",
+          "instrument_group",
+          "instrument_name",
+          "instrument_security_code",
+          "position_instrument_name",
+          "position_instrument_asset_type",
+          "position_instrument_security_code",
+          "market_cap",
+          "portfolio_team",
+          "whale_minnow_tag",
+          "illiquid_private",
+          "company_netted_direction"
+        ],
+        "date_range": {
+          "start_date": null,
+          "end_date": null,
+          "period": "YTD"
+        },
+        "display_name_map": {
+          "fund_id": "Fund ID",
+          "primary_analyst": "1° Analyst",
+          "direction": "Direction",
+          "company_security_code_portfolio_asset_class": "Company Security Code Demo Asset Class",
+          "company_security_code": "Company Security Code",
+          "company_subsector": "Demo Subsector",
+          "fund_name": "Fund Name",
+          "instrument_asset_class": "Instrument Asset Class",
+          "instrument_portfolio_asset_class": "Demo Instrument Asset Class",
+          "secondary_analyst": "2° Analyst",
+          "instrument_group": "Investment Group",
+          "instrument_name": "Instrument Name",
+          "instrument_security_code": "Security Code",
+          "position_instrument_name": "Position Instrument Name",
+          "position_instrument_asset_type": "Position Instrument Asset Type",
+          "position_instrument_security_code": "Position Instrument Security Code",
+          "market_cap": "Market Cap",
+          "portfolio_team": "Demo Team",
+          "whale_minnow_tag": "Whale/Minnow",
+          "illiquid_private": "Illiquid Private",
+          "company_netted_direction": "Company Netted Direction"
+        }
+      }
+    },
+    "liquidity-summary": {
+      "metadata": {
+        "supported_filters": [
+          "fund_id",
+          "primary_analyst",
+          "direction",
+          "company_security_code_portfolio_asset_class",
+          "company_security_code",
+          "company_subsector",
+          "fund_name",
+          "instrument_asset_class",
+          "instrument_portfolio_asset_class",
+          "secondary_analyst",
+          "instrument_group",
+          "instrument_name",
+          "instrument_security_code",
+          "position_instrument_name",
+          "position_instrument_asset_type",
+          "position_instrument_security_code",
+          "market_cap",
+          "portfolio_team",
+          "whale_minnow_tag",
+          "illiquid_private",
+          "company_netted_direction"
+        ],
+        "date_range": {
+          "start_date": null,
+          "end_date": null,
+          "period": "YTD"
+        },
+        "display_name_map": {
+          "fund_id": "Fund ID",
+          "primary_analyst": "1° Analyst",
+          "direction": "Direction",
+          "company_security_code_portfolio_asset_class": "Company Security Code Demo Asset Class",
+          "company_security_code": "Company Security Code",
+          "company_subsector": "Demo Subsector",
+          "fund_name": "Fund Name",
+          "instrument_asset_class": "Instrument Asset Class",
+          "instrument_portfolio_asset_class": "Demo Instrument Asset Class",
+          "secondary_analyst": "2° Analyst",
+          "instrument_group": "Investment Group",
+          "instrument_name": "Instrument Name",
+          "instrument_security_code": "Security Code",
+          "position_instrument_name": "Position Instrument Name",
+          "position_instrument_asset_type": "Position Instrument Asset Type",
+          "position_instrument_security_code": "Position Instrument Security Code",
+          "market_cap": "Market Cap",
+          "portfolio_team": "Demo Team",
+          "whale_minnow_tag": "Whale/Minnow",
+          "illiquid_private": "Illiquid Private",
+          "company_netted_direction": "Company Netted Direction"
+        }
+      }
+    },
+    "kg-exposure": {
+      "metadata": {
+        "supported_filters": [
+          "fund_id",
+          "primary_analyst",
+          "direction",
+          "company_security_code_portfolio_asset_class",
+          "company_security_code",
+          "company_subsector",
+          "fund_name",
+          "instrument_asset_class",
+          "instrument_portfolio_asset_class",
+          "secondary_analyst",
+          "instrument_group",
+          "instrument_name",
+          "instrument_security_code",
+          "position_instrument_name",
+          "position_instrument_asset_type",
+          "position_instrument_security_code",
+          "market_cap",
+          "portfolio_team",
+          "whale_minnow_tag",
+          "illiquid_private",
+          "company_netted_direction"
+        ],
+        "date_range": {
+          "start_date": null,
+          "end_date": null,
+          "period": "YTD"
+        },
+        "group_by_config": {
+          "selectable_dimensions": [
+            "ta",
+            "modality",
+            "stage",
+            "geography"
+          ],
+          "required_dimensions": []
+        },
+        "group_config_default": {
+          "selectable_dimensions": [
+            "ta"
+          ],
+          "required_dimensions": []
+        },
+        "display_name_map": {
+          "fund_id": "Fund ID",
+          "primary_analyst": "1° Analyst",
+          "direction": "Direction",
+          "company_security_code_portfolio_asset_class": "Company Security Code Demo Asset Class",
+          "company_security_code": "Company Security Code",
+          "company_subsector": "Demo Subsector",
+          "fund_name": "Fund Name",
+          "instrument_asset_class": "Instrument Asset Class",
+          "instrument_portfolio_asset_class": "Demo Instrument Asset Class",
+          "secondary_analyst": "2° Analyst",
+          "instrument_group": "Investment Group",
+          "instrument_name": "Instrument Name",
+          "instrument_security_code": "Security Code",
+          "position_instrument_name": "Position Instrument Name",
+          "position_instrument_asset_type": "Position Instrument Asset Type",
+          "position_instrument_security_code": "Position Instrument Security Code",
+          "market_cap": "Market Cap",
+          "portfolio_team": "Demo Team",
+          "whale_minnow_tag": "Whale/Minnow",
+          "illiquid_private": "Illiquid Private",
+          "company_netted_direction": "Company Netted Direction",
+          "ta": "Therapeutic Area",
+          "modality": "Modality",
+          "stage": "Dev Stage",
+          "geography": "Drug Geography"
+        }
+      }
+    },
+    "analyst-breakdown": {
+      "metadata": {
+        "supported_filters": [
+          "fund_id",
+          "primary_analyst",
+          "direction",
+          "company_security_code_portfolio_asset_class",
+          "company_security_code",
+          "company_subsector",
+          "fund_name",
+          "instrument_asset_class",
+          "instrument_portfolio_asset_class",
+          "secondary_analyst",
+          "instrument_group",
+          "instrument_name",
+          "instrument_security_code",
+          "position_instrument_name",
+          "position_instrument_asset_type",
+          "position_instrument_security_code",
+          "market_cap",
+          "portfolio_team",
+          "whale_minnow_tag",
+          "illiquid_private",
+          "company_netted_direction"
+        ],
+        "date_range": {
+          "start_date": null,
+          "end_date": null,
+          "period": "YTD"
+        },
+        "display_name_map": {
+          "fund_id": "Fund ID",
+          "primary_analyst": "1° Analyst",
+          "direction": "Direction",
+          "company_security_code_portfolio_asset_class": "Company Security Code Demo Asset Class",
+          "company_security_code": "Company Security Code",
+          "company_subsector": "Demo Subsector",
+          "fund_name": "Fund Name",
+          "instrument_asset_class": "Instrument Asset Class",
+          "instrument_portfolio_asset_class": "Demo Instrument Asset Class",
+          "secondary_analyst": "2° Analyst",
+          "instrument_group": "Investment Group",
+          "instrument_name": "Instrument Name",
+          "instrument_security_code": "Security Code",
+          "position_instrument_name": "Position Instrument Name",
+          "position_instrument_asset_type": "Position Instrument Asset Type",
+          "position_instrument_security_code": "Position Instrument Security Code",
+          "market_cap": "Market Cap",
+          "portfolio_team": "Demo Team",
+          "whale_minnow_tag": "Whale/Minnow",
+          "illiquid_private": "Illiquid Private",
+          "company_netted_direction": "Company Netted Direction"
+        }
+      }
+    },
+    "fund-breakdown": {
+      "metadata": {
+        "supported_filters": [
+          "fund_id",
+          "primary_analyst",
+          "direction",
+          "company_security_code_portfolio_asset_class",
+          "company_security_code",
+          "company_subsector",
+          "fund_name",
+          "instrument_asset_class",
+          "instrument_portfolio_asset_class",
+          "secondary_analyst",
+          "instrument_group",
+          "instrument_name",
+          "instrument_security_code",
+          "position_instrument_name",
+          "position_instrument_asset_type",
+          "position_instrument_security_code",
+          "market_cap",
+          "portfolio_team",
+          "whale_minnow_tag",
+          "illiquid_private",
+          "company_netted_direction"
+        ],
+        "date_range": {
+          "start_date": null,
+          "end_date": null,
+          "period": "YTD"
+        },
+        "display_name_map": {
+          "fund_id": "Fund ID",
+          "primary_analyst": "1° Analyst",
+          "direction": "Direction",
+          "company_security_code_portfolio_asset_class": "Company Security Code Demo Asset Class",
+          "company_security_code": "Company Security Code",
+          "company_subsector": "Demo Subsector",
+          "fund_name": "Fund Name",
+          "instrument_asset_class": "Instrument Asset Class",
+          "instrument_portfolio_asset_class": "Demo Instrument Asset Class",
+          "secondary_analyst": "2° Analyst",
+          "instrument_group": "Investment Group",
+          "instrument_name": "Instrument Name",
+          "instrument_security_code": "Security Code",
+          "position_instrument_name": "Position Instrument Name",
+          "position_instrument_asset_type": "Position Instrument Asset Type",
+          "position_instrument_security_code": "Position Instrument Security Code",
+          "market_cap": "Market Cap",
+          "portfolio_team": "Demo Team",
+          "whale_minnow_tag": "Whale/Minnow",
+          "illiquid_private": "Illiquid Private",
+          "company_netted_direction": "Company Netted Direction"
+        }
+      }
+    },
+    "performance-overview": {
+      "metadata": {
+        "supported_filters": [
+          "fund_id",
+          "primary_analyst",
+          "direction",
+          "company_security_code_portfolio_asset_class",
+          "company_security_code",
+          "company_subsector",
+          "fund_name",
+          "instrument_asset_class",
+          "instrument_portfolio_asset_class",
+          "secondary_analyst",
+          "instrument_group",
+          "instrument_name",
+          "instrument_security_code",
+          "position_instrument_name",
+          "position_instrument_asset_type",
+          "position_instrument_security_code",
+          "market_cap",
+          "portfolio_team",
+          "whale_minnow_tag",
+          "illiquid_private",
+          "company_netted_direction"
+        ],
+        "date_range": {
+          "start_date": null,
+          "end_date": null,
+          "period": "YTD"
+        },
+        "group_by_config": {
+          "selectable_dimensions": [
+            "fund_name",
+            "direction",
+            "company_subsector",
+            "instrument_portfolio_asset_class",
+            "illiquid_private"
+          ],
+          "required_dimensions": [
+            "date"
+          ]
+        },
+        "group_config_default": {
+          "selectable_dimensions": [
+            "fund_name"
+          ],
+          "required_dimensions": [
+            "date"
+          ]
+        },
+        "display_name_map": {
+          "fund_id": "Fund ID",
+          "primary_analyst": "1° Analyst",
+          "direction": "Direction",
+          "company_security_code_portfolio_asset_class": "Company Security Code Demo Asset Class",
+          "company_security_code": "Company Security Code",
+          "company_subsector": "Demo Subsector",
+          "fund_name": "Fund Name",
+          "instrument_asset_class": "Instrument Asset Class",
+          "instrument_portfolio_asset_class": "Demo Instrument Asset Class",
+          "secondary_analyst": "2° Analyst",
+          "instrument_group": "Investment Group",
+          "instrument_name": "Instrument Name",
+          "instrument_security_code": "Security Code",
+          "position_instrument_name": "Position Instrument Name",
+          "position_instrument_asset_type": "Position Instrument Asset Type",
+          "position_instrument_security_code": "Position Instrument Security Code",
+          "market_cap": "Market Cap",
+          "portfolio_team": "Demo Team",
+          "whale_minnow_tag": "Whale/Minnow",
+          "illiquid_private": "Illiquid Private",
+          "company_netted_direction": "Company Netted Direction",
+          "date": "Date"
+        }
+      },
+      "benchmark_id": "DEMO",
+      "benchmarks": {
+        "DEMO": "Demo benchmark"
+      }
+    },
+    "top-winners-and-losers-investment": {
+      "metadata": {
+        "supported_filters": [
+          "fund_id",
+          "primary_analyst",
+          "direction",
+          "company_security_code_portfolio_asset_class",
+          "company_security_code",
+          "company_subsector",
+          "fund_name",
+          "instrument_asset_class",
+          "instrument_portfolio_asset_class",
+          "secondary_analyst",
+          "instrument_group",
+          "instrument_name",
+          "instrument_security_code",
+          "position_instrument_name",
+          "position_instrument_asset_type",
+          "position_instrument_security_code",
+          "market_cap",
+          "portfolio_team",
+          "whale_minnow_tag",
+          "illiquid_private",
+          "company_netted_direction"
+        ],
+        "date_range": {
+          "start_date": null,
+          "end_date": null,
+          "period": "YTD"
+        },
+        "top_n": "Top 10",
+        "supported_top_n": [
+          "Top 5",
+          "Top 10",
+          "Top 20",
+          "Show All"
+        ],
+        "supported_date_ranges": [
+          "DTD",
+          "WTD",
+          "MTD",
+          "QTD",
+          "YTD",
+          "ITD"
+        ],
+        "display_name_map": {
+          "fund_id": "Fund ID",
+          "primary_analyst": "1° Analyst",
+          "direction": "Direction",
+          "company_security_code_portfolio_asset_class": "Company Security Code Demo Asset Class",
+          "company_security_code": "Company Security Code",
+          "company_subsector": "Demo Subsector",
+          "fund_name": "Fund Name",
+          "instrument_asset_class": "Instrument Asset Class",
+          "instrument_portfolio_asset_class": "Demo Instrument Asset Class",
+          "secondary_analyst": "2° Analyst",
+          "instrument_group": "Investment Group",
+          "instrument_name": "Instrument Name",
+          "instrument_security_code": "Security Code",
+          "position_instrument_name": "Position Instrument Name",
+          "position_instrument_asset_type": "Position Instrument Asset Type",
+          "position_instrument_security_code": "Position Instrument Security Code",
+          "market_cap": "Market Cap",
+          "portfolio_team": "Demo Team",
+          "whale_minnow_tag": "Whale/Minnow",
+          "illiquid_private": "Illiquid Private",
+          "company_netted_direction": "Company Netted Direction"
+        }
+      }
+    },
+    "top-winners-and-losers-analyst": {
+      "metadata": {
+        "supported_filters": [
+          "fund_id",
+          "primary_analyst",
+          "direction",
+          "company_security_code_portfolio_asset_class",
+          "company_security_code",
+          "company_subsector",
+          "fund_name",
+          "instrument_asset_class",
+          "instrument_portfolio_asset_class",
+          "secondary_analyst",
+          "instrument_group",
+          "instrument_name",
+          "instrument_security_code",
+          "position_instrument_name",
+          "position_instrument_asset_type",
+          "position_instrument_security_code",
+          "market_cap",
+          "portfolio_team",
+          "whale_minnow_tag",
+          "illiquid_private",
+          "company_netted_direction"
+        ],
+        "date_range": {
+          "start_date": null,
+          "end_date": null,
+          "period": "YTD"
+        },
+        "group_by_config": {
+          "selectable_dimensions": [
+            "primary_analyst",
+            "secondary_analyst"
+          ],
+          "required_dimensions": []
+        },
+        "group_config_default": {
+          "selectable_dimensions": [
+            "primary_analyst"
+          ],
+          "required_dimensions": []
+        },
+        "top_n": "Top 10",
+        "supported_top_n": [
+          "Top 5",
+          "Top 10",
+          "Top 20",
+          "Show All"
+        ],
+        "supported_date_ranges": [
+          "DTD",
+          "WTD",
+          "MTD",
+          "QTD",
+          "YTD",
+          "ITD"
+        ],
+        "display_name_map": {
+          "fund_id": "Fund ID",
+          "primary_analyst": "1° Analyst",
+          "direction": "Direction",
+          "company_security_code_portfolio_asset_class": "Company Security Code Demo Asset Class",
+          "company_security_code": "Company Security Code",
+          "company_subsector": "Demo Subsector",
+          "fund_name": "Fund Name",
+          "instrument_asset_class": "Instrument Asset Class",
+          "instrument_portfolio_asset_class": "Demo Instrument Asset Class",
+          "secondary_analyst": "2° Analyst",
+          "instrument_group": "Investment Group",
+          "instrument_name": "Instrument Name",
+          "instrument_security_code": "Security Code",
+          "position_instrument_name": "Position Instrument Name",
+          "position_instrument_asset_type": "Position Instrument Asset Type",
+          "position_instrument_security_code": "Position Instrument Security Code",
+          "market_cap": "Market Cap",
+          "portfolio_team": "Demo Team",
+          "whale_minnow_tag": "Whale/Minnow",
+          "illiquid_private": "Illiquid Private",
+          "company_netted_direction": "Company Netted Direction"
+        }
+      }
+    },
+    "batting-slugging": {
+      "metadata": {
+        "supported_filters": [
+          "fund_id",
+          "primary_analyst",
+          "direction",
+          "company_security_code_portfolio_asset_class",
+          "company_security_code",
+          "company_subsector",
+          "fund_name",
+          "instrument_asset_class",
+          "instrument_portfolio_asset_class",
+          "secondary_analyst",
+          "instrument_group",
+          "instrument_name",
+          "instrument_security_code",
+          "position_instrument_name",
+          "position_instrument_asset_type",
+          "position_instrument_security_code",
+          "market_cap",
+          "portfolio_team",
+          "whale_minnow_tag",
+          "illiquid_private",
+          "company_netted_direction"
+        ],
+        "date_range": {
+          "start_date": null,
+          "end_date": null,
+          "period": "YTD"
+        },
+        "group_by_config": {
+          "selectable_dimensions": [
+            "primary_analyst",
+            "company_subsector",
+            "direction"
+          ],
+          "required_dimensions": []
+        },
+        "group_config_default": {
+          "selectable_dimensions": [
+            "primary_analyst"
+          ],
+          "required_dimensions": []
+        },
+        "display_name_map": {
+          "fund_id": "Fund ID",
+          "primary_analyst": "1° Analyst",
+          "direction": "Direction",
+          "company_security_code_portfolio_asset_class": "Company Security Code Demo Asset Class",
+          "company_security_code": "Company Security Code",
+          "company_subsector": "Demo Subsector",
+          "fund_name": "Fund Name",
+          "instrument_asset_class": "Instrument Asset Class",
+          "instrument_portfolio_asset_class": "Demo Instrument Asset Class",
+          "secondary_analyst": "2° Analyst",
+          "instrument_group": "Investment Group",
+          "instrument_name": "Instrument Name",
+          "instrument_security_code": "Security Code",
+          "position_instrument_name": "Position Instrument Name",
+          "position_instrument_asset_type": "Position Instrument Asset Type",
+          "position_instrument_security_code": "Position Instrument Security Code",
+          "market_cap": "Market Cap",
+          "portfolio_team": "Demo Team",
+          "whale_minnow_tag": "Whale/Minnow",
+          "illiquid_private": "Illiquid Private",
+          "company_netted_direction": "Company Netted Direction"
+        }
+      }
+    }
+  },
+  "catalog": {
+    "metrics": [
+      {
+        "name": "date",
+        "display_name": "Date",
+        "description": "Date in YYYY-MM-DD format (ISO-8601)",
+        "display_type": "date"
+      },
+      {
+        "name": "fund_id",
+        "display_name": "Fund ID",
+        "description": "Portfolio Internal Unique ID of the Demo fund",
+        "display_type": "string"
+      },
+      {
+        "name": "fund_name",
+        "display_name": "Fund Name",
+        "description": "Name of the Demo Fund",
+        "display_type": "string"
+      },
+      {
+        "name": "primary_analyst",
+        "display_name": "1° Analyst",
+        "description": "Primary Demo Analyst, Name",
+        "display_type": "string"
+      },
+      {
+        "name": "primary_analyst_avatar",
+        "display_name": "1° Analyst",
+        "description": "Primary Demo Analyst, avatar",
+        "display_type": "string"
+      },
+      {
+        "name": "secondary_analyst",
+        "display_name": "2° Analyst",
+        "description": "Secondary Demo Analyst, Name",
+        "display_type": "string"
+      },
+      {
+        "name": "secondary_analyst_avatar",
+        "display_name": "2° Analyst",
+        "description": "Secondary Demo Analyst, avatar",
+        "display_type": "string"
+      },
+      {
+        "name": "instrument_id",
+        "display_name": "Instrument ID",
+        "description": "Portfolio Internal Unique ID of the security",
+        "display_type": "string"
+      },
+      {
+        "name": "instrument_name",
+        "display_name": "Instrument Name",
+        "description": "Name of the security",
+        "display_type": "string"
+      },
+      {
+        "name": "instrument_group",
+        "display_name": "Investment Group",
+        "description": "Demo method of grouping instruments - Group of the instrument",
+        "display_type": "string"
+      },
+      {
+        "name": "instrument_security_code",
+        "display_name": "Security Code",
+        "description": "Demo Security Code",
+        "display_type": "string"
+      },
+      {
+        "name": "instrument_security_code_display",
+        "display_name": "Security Code Display",
+        "description": "Demo Security Code display format",
+        "display_type": "string"
+      },
+      {
+        "name": "company_security_code",
+        "display_name": "Company Security Code",
+        "description": "Demo Security code of the company's primary instrument",
+        "display_type": "string"
+      },
+      {
+        "name": "company_security_code_portfolio_asset_class",
+        "display_name": "Company Security Code Demo Asset Class",
+        "description": "Company security code combined with Demo asset class",
+        "display_type": "string"
+      },
+      {
+        "name": "instrument_portfolio_asset_class",
+        "display_name": "Demo Instrument Asset Class",
+        "description": "Demo Asset class of the instrument",
+        "display_type": "string"
+      },
+      {
+        "name": "instrument_asset_class",
+        "display_name": "Instrument Asset Class",
+        "description": "Asset class of the instrument",
+        "display_type": "string"
+      },
+      {
+        "name": "instrument_ticker",
+        "display_name": "Instrument Ticker",
+        "description": "Ticker of the security (inclusive of the country code)",
+        "display_type": "string"
+      },
+      {
+        "name": "position_instrument_id",
+        "display_name": "Position Instrument ID",
+        "description": "Portfolio Internal Unique ID of instrument that the position is part of",
+        "display_type": "string"
+      },
+      {
+        "name": "position_instrument_name",
+        "display_name": "Position Instrument Name",
+        "description": "Name of the instrument that the position is part of",
+        "display_type": "string"
+      },
+      {
+        "name": "position_instrument_security_code",
+        "display_name": "Position Instrument Security Code",
+        "description": "Demo Security code of the instrument that the position is part of",
+        "display_type": "string"
+      },
+      {
+        "name": "position_instrument_security_code_display",
+        "display_name": "Position Instrument Security Code Display",
+        "description": "Demo Security code display of the instrument that the position is part of",
+        "display_type": "string"
+      },
+      {
+        "name": "company_security_code_display",
+        "display_name": "Company Security Code Display",
+        "description": "Demo Security code display of the company",
+        "display_type": "string"
+      },
+      {
+        "name": "position_instrument_asset_type",
+        "display_name": "Position Instrument Asset Type",
+        "description": "Asset type of the instrument that the position is part of",
+        "display_type": "string"
+      },
+      {
+        "name": "company_name",
+        "display_name": "Issuer",
+        "description": "Company Name of the ultimate parent or issuer",
+        "display_type": "string"
+      },
+      {
+        "name": "company_subsector",
+        "display_name": "Demo Subsector",
+        "description": "Demo Subsector assigned to the company",
+        "display_type": "string"
+      },
+      {
+        "name": "direction",
+        "display_name": "Direction",
+        "description": "Net Direction of the total position (long or short) accounting for all held positions (Stock, Options, Swap, etc)",
+        "display_type": "string"
+      },
+      {
+        "name": "market_cap",
+        "display_name": "Market Cap",
+        "description": "Market Cap (USD) of the company",
+        "display_type": "string"
+      },
+      {
+        "name": "net_exposure",
+        "display_name": "Net Exp ($)",
+        "description": "Total Net Exposure (NMV) as of the last day in the date range (in USD)",
+        "display_type": "dollars"
+      },
+      {
+        "name": "daily_pnl_usd",
+        "display_name": "Daily PnL ($)",
+        "description": "PnL on the last day in the date range (in USD)",
+        "display_type": "pnl"
+      },
+      {
+        "name": "gross_exposure",
+        "display_name": "Gross Exp ($)",
+        "description": "Total Gross Exposure (GMV), calculated as SUM(ABS(net_exposure)), as of the last day in the date range (in USD)",
+        "display_type": "dollars"
+      },
+      {
+        "name": "sod_net_exposure",
+        "display_name": "SOD Net Exp ($)",
+        "description": "Start-of-day Net exposure (NMV) as of the last day in the date range (in USD)",
+        "display_type": "dollars"
+      },
+      {
+        "name": "net_exposure_percent",
+        "display_name": "Net Exp (% NAV)",
+        "description": "Total Net Exposure (NMV), as of the last day in the date range (as a percent of total NAV)",
+        "display_type": "percent"
+      },
+      {
+        "name": "gross_exposure_percent",
+        "display_name": "Gross Exp (% NAV)",
+        "description": "Total Gross Exposure (GMV), calculated as SUM(ABS(net_exposure)) / total_nav, as of the last day in the date range (as a percent of total NAV)",
+        "display_type": "percent"
+      },
+      {
+        "name": "cumulative_pnl",
+        "display_name": "PnL ($)",
+        "description": "Cumulative Profit and Loss (PnL) for the full date range (in USD)",
+        "display_type": "pnl"
+      },
+      {
+        "name": "daily_pnl_percent_nav",
+        "display_name": "Daily PnL (% NAV)",
+        "description": "PnL for the period (as a percentage of NAV)",
+        "display_type": "percent"
+      },
+      {
+        "name": "cumulative_pnl_percent_nav",
+        "display_name": "PnL (% NAV)",
+        "description": "PnL for the period (as a percentage of NAV)",
+        "display_type": "percent"
+      },
+      {
+        "name": "wtd_pnl_percent_nav",
+        "display_name": "WTD PnL (% NAV)",
+        "description": "PnL for the period (as a percentage of NAV)",
+        "display_type": "percent"
+      },
+      {
+        "name": "mtd_pnl_percent_nav",
+        "display_name": "MTD PnL (% NAV)",
+        "description": "PnL for the period (as a percentage of NAV)",
+        "display_type": "percent"
+      },
+      {
+        "name": "qtd_pnl_percent_nav",
+        "display_name": "QTD PnL (% NAV)",
+        "description": "PnL for the period (as a percentage of NAV)",
+        "display_type": "percent"
+      },
+      {
+        "name": "ytd_pnl_percent_nav",
+        "display_name": "YTD PnL (% NAV)",
+        "description": "PnL for the period (as a percentage of NAV)",
+        "display_type": "percent"
+      },
+      {
+        "name": "itd_pnl_percent_nav",
+        "display_name": "ITD PnL (% NAV)",
+        "description": "PnL since inception (as a percentage of NAV)",
+        "display_type": "percent"
+      },
+      {
+        "name": "total_nav",
+        "display_name": "NAV",
+        "description": "Total Net Asset Value (NAV) as of the last day in the date range (in USD)",
+        "display_type": "dollars"
+      },
+      {
+        "name": "daily_benchmark_pnl_percent",
+        "display_name": "Daily Benchmark Rtn (%)",
+        "description": "Benchmark Return (Rtn) for the day",
+        "display_type": "percent"
+      },
+      {
+        "name": "wtd_benchmark_pnl_percent",
+        "display_name": "WTD Benchmark Rtn (%)",
+        "description": "Benchmark Return (Rtn) for the period, calculated based on geometric compounding of daily returns, computed as ((1+[t1 rtn])*(1+[t2 rtn])*(1+[t3 rtn])...*(1+tn rtn])-1)",
+        "display_type": "percent"
+      },
+      {
+        "name": "mtd_benchmark_pnl_percent",
+        "display_name": "MTD Benchmark Rtn (%)",
+        "description": "Benchmark Return (Rtn) for the period, calculated based on geometric compounding of daily returns, computed as ((1+[t1 rtn])*(1+[t2 rtn])*(1+[t3 rtn])...*(1+tn rtn])-1)",
+        "display_type": "percent"
+      },
+      {
+        "name": "qtd_benchmark_pnl_percent",
+        "display_name": "QTD Benchmark Rtn (%)",
+        "description": "Benchmark Return (Rtn) for the period, calculated based on geometric compounding of daily returns, computed as ((1+[t1 rtn])*(1+[t2 rtn])*(1+[t3 rtn])...*(1+tn rtn])-1)",
+        "display_type": "percent"
+      },
+      {
+        "name": "ytd_benchmark_pnl_percent",
+        "display_name": "YTD Benchmark Rtn (%)",
+        "description": "Benchmark Return (Rtn) for the period, calculated based on geometric compounding of daily returns, computed as ((1+[t1 rtn])*(1+[t2 rtn])*(1+[t3 rtn])...*(1+tn rtn])-1)",
+        "display_type": "percent"
+      },
+      {
+        "name": "itd_benchmark_pnl_percent",
+        "display_name": "ITD Benchmark Rtn (%)",
+        "description": "Benchmark Return (Rtn) since inception, calculated based on geometric compounding of daily returns, computed as ((1+[t1 rtn])*(1+[t2 rtn])*(1+[t3 rtn])...*(1+tn rtn])-1)",
+        "display_type": "percent"
+      },
+      {
+        "name": "number_of_wins",
+        "display_name": "Winners (Count)",
+        "description": "Count of companies that had a positive PnL over the period",
+        "display_type": "integer"
+      },
+      {
+        "name": "number_of_losses",
+        "display_name": "Losers (Count)",
+        "description": "Count of companies that had a negative PnL over the period",
+        "display_type": "integer"
+      },
+      {
+        "name": "total_number_of_trades",
+        "display_name": "Trades (Count)",
+        "description": "Total number of trades over the period",
+        "display_type": "integer"
+      },
+      {
+        "name": "hit_rate",
+        "display_name": "Batting Avg",
+        "description": "The percent of winning trades as a percentage of all trades",
+        "display_type": "percent_no_decimals"
+      },
+      {
+        "name": "slugging_ratio",
+        "display_name": "Slugging Ratio",
+        "description": "Ratio of average performance of winning trades vs the absolute value of average performance of losing trades",
+        "display_type": "ratio"
+      },
+      {
+        "name": "avg_win_pnl_percent_nav",
+        "display_name": "Winners (Avg PnL %NAV)",
+        "description": "Average profit as a percentage of NAV of winning trades",
+        "display_type": "percent"
+      },
+      {
+        "name": "avg_loss_pnl_percent_nav",
+        "display_name": "Losers (Avg PnL % NAV)",
+        "description": "Average losses as a percentage of NAV of losing trades",
+        "display_type": "percent"
+      },
+      {
+        "name": "company_netted_direction",
+        "display_name": "Company Netted Direction",
+        "description": "Net Direction of the position (Long or Short) based on company-netted exposure across issuer and liquidity classifications (illiquid private vs. non-illiquid private)",
+        "display_type": "string"
+      },
+      {
+        "name": "company_netted_gmv",
+        "display_name": "GMV ($)",
+        "description": "Gross Market Value (GMV) – Sum of absolute net exposures across issuer and liquidity classifications (illiquid private vs. non-illiquid private), netted within each issuer–classification pair, as of the last day in the period (in USD)",
+        "display_type": "dollars"
+      },
+      {
+        "name": "company_netted_gmv_percent_nav",
+        "display_name": "GMV (% NAV)",
+        "description": "Gross Market Value (GMV) – Sum of absolute net exposures across issuer and liquidity classifications (illiquid private vs. non-illiquid private), netted within each issuer–classification pair, as of the last day in the period (as a percent of total NAV)",
+        "display_type": "percent"
+      },
+      {
+        "name": "illiquid_private",
+        "display_name": "Illiquid Private",
+        "description": "Boolean flag indicating if position is classified as illiquid private (Private=Private AND ((Private Type=DI AND Lock Up Status=Blank) OR Private Type=Other))",
+        "display_type": "string"
+      },
+      {
+        "name": "days_to_cover_binned",
+        "display_name": "Days to Trade (Bucket)",
+        "description": "Days to Trade (DTT), or the number of days required to close/sell/cover a position assuming a 20% participation rate",
+        "display_type": "string"
+      },
+      {
+        "name": "analyst",
+        "display_name": "Analyst",
+        "description": "Analyst name (unified identity from primary/secondary analyst merge)",
+        "display_type": "string"
+      },
+      {
+        "name": "analyst_avatar",
+        "display_name": "Analyst",
+        "description": "Analyst avatar identifier (email|first|last)",
+        "display_type": "string"
+      },
+      {
+        "name": "primary_analyst_net_exposure",
+        "display_name": "1° Exp",
+        "description": "Net exposure when grouped as primary analyst (in USD)",
+        "display_type": "dollars"
+      },
+      {
+        "name": "primary_analyst_cumulative_pnl_percent_nav",
+        "display_name": "1° PnL",
+        "description": "Cumulative PnL (% NAV) when grouped as primary analyst",
+        "display_type": "percent"
+      },
+      {
+        "name": "secondary_analyst_net_exposure",
+        "display_name": "2° Exp",
+        "description": "Net exposure when grouped as secondary analyst (in USD)",
+        "display_type": "dollars"
+      },
+      {
+        "name": "secondary_analyst_cumulative_pnl_percent_nav",
+        "display_name": "2° PnL",
+        "description": "Cumulative PnL (% NAV) when grouped as secondary analyst",
+        "display_type": "percent"
+      },
+      {
+        "name": "portfolio_team",
+        "display_name": "Demo Team",
+        "description": "Demo Team assigned to the position instrument",
+        "display_type": "string"
+      },
+      {
+        "name": "cumulative_group_pnl_percent",
+        "display_name": "PnL (% NMV)",
+        "description": "PnL for the date range (as a proportion of ABS(Sum of SOD NMV netted by issuer-liquidity)), summed across all days in the period. Only includes days where SOD NMV (netted by issuer-liquidity) is greater than 20.0bps",
+        "display_type": "percent"
+      },
+      {
+        "name": "cumulative_alpha_pnl_percent",
+        "display_name": "Alpha PnL (% NMV)",
+        "description": "Alpha PnL as a percentage of SOD NMV for the period, computed by subtracting Beta PnL from Total PnL (accounting for the benchmark Rtn and the exposure of the position or group), summed across all days in the period. Only includes days where SOD NMV (netted by issuer-liquidity) is greater than 20.0bps",
+        "display_type": "percent"
+      },
+      {
+        "name": "cumulative_benchmark_pnl_percent",
+        "display_name": "Benchmark Rtn (%)",
+        "description": "Benchmark Return (Rtn) for the period, calculated based on geometric compounding of daily returns, computed as ((1+[t1 rtn])*(1+[t2 rtn])*(1+[t3 rtn])...*(1+tn rtn])-1)",
+        "display_type": "percent"
+      },
+      {
+        "name": "average_net_exposure",
+        "display_name": "AVG NMV($)",
+        "description": "Average Net Exposure (NMV) over the selected time period (in USD)",
+        "display_type": "dollars"
+      },
+      {
+        "name": "cumulative_simple_alpha_pnl_percent_nav",
+        "display_name": "Alpha PnL, Simple (% NAV)",
+        "description": "Simple Alpha PnL for the period - Fund alpha performance computed as the direct difference between period's PnL (% NAV) and benchmark's total return for that period: [Demo PnL % NAV] - [Benchmark Rtn]",
+        "display_type": "percent"
+      },
+      {
+        "name": "cumulative_net_adjusted_alpha_pnl_percent_nav",
+        "display_name": "Alpha PnL, Net Adj (% NAV)",
+        "description": "Net Adjusted Alpha PnL for the period - Fund alpha performance computed as the direct difference between period's PnL (% NAV) and benchmark's total return adjusted for average net market value for that period: [Demo PnL % NAV] - ([Benchmark Rtn] * [Average NMV % NAV])",
+        "display_type": "percent"
+      },
+      {
+        "name": "average_net_exposure_percent",
+        "display_name": "Avg Net Exp (% NAV)",
+        "description": "Average net exposure as a percentage of NAV over the selected time period",
+        "display_type": "percent"
+      },
+      {
+        "name": "cumulative_merged_pnl_percent_nav",
+        "display_name": "Merged PnL (% NAV)",
+        "description": "Merged Analyst PnL for the period - Combined primary and secondary analyst performance computed as period's Primary PnL (% NAV) + 0.5 * period's Secondary PnL (% NAV)",
+        "display_type": "percent"
+      },
+      {
+        "name": "primary_cumulative_pnl_percent_nav",
+        "display_name": "1° PnL (% NAV)",
+        "description": "Primary PnL for the period (as a percentage of NAV)",
+        "display_type": "percent"
+      },
+      {
+        "name": "secondary_cumulative_pnl_percent_nav",
+        "display_name": "2° PnL (% NAV)",
+        "description": "Secondary PnL for the period (as a percentage of NAV)",
+        "display_type": "percent"
+      },
+      {
+        "name": "primary_average_net_exposure",
+        "display_name": "1° Average Net Exp ($)",
+        "description": "Primary Average Net Exposure (NMV) over the selected time period (in USD)",
+        "display_type": "dollars"
+      },
+      {
+        "name": "secondary_average_net_exposure",
+        "display_name": "2° Average Net Exp ($)",
+        "description": "Secondary Average Net Exposure (NMV) over the selected time period (in USD)",
+        "display_type": "dollars"
+      },
+      {
+        "name": "exposure_percent",
+        "display_name": "EXP",
+        "description": "Total Net Exposure (NMV) as of the last day in the date range (as a percent of total NAV)",
+        "display_type": "percent"
+      },
+      {
+        "name": "quantity",
+        "display_name": "Quantity",
+        "description": "Units (shares, contracts, etc) held of the security",
+        "display_type": "float"
+      },
+      {
+        "name": "days_to_cover",
+        "display_name": "Days to Trade",
+        "description": "Days to Trade (DTT), or the number of days required to close/sell/cover a position assuming a 20% participation rate and calculated as [quantity] / ([trading volume] * 0.2)",
+        "display_type": "float"
+      },
+      {
+        "name": "wtd_pnl",
+        "display_name": "WTD PnL ($)",
+        "description": "Week to Date (WTD) PnL (in USD)",
+        "display_type": "pnl"
+      },
+      {
+        "name": "mtd_pnl",
+        "display_name": "MTD PnL ($)",
+        "description": "Month to Date (MTD) PnL (in USD)",
+        "display_type": "pnl"
+      },
+      {
+        "name": "qtd_pnl",
+        "display_name": "QTD PnL ($)",
+        "description": "Quarter to Date (QTD) PnL (in USD)",
+        "display_type": "pnl"
+      },
+      {
+        "name": "ytd_pnl",
+        "display_name": "YTD PnL ($)",
+        "description": "Year to Date (YTD) PnL (in USD)",
+        "display_type": "pnl"
+      },
+      {
+        "name": "primary_analyst_avatars",
+        "display_name": "1° Analysts",
+        "description": "Primary Demo Analyst, avatar(s)",
+        "display_type": "string"
+      },
+      {
+        "name": "secondary_analyst_avatars",
+        "display_name": "2° Analysts",
+        "description": "Secondary Demo Analyst, avatar(s)",
+        "display_type": "string"
+      },
+      {
+        "name": "average_cost",
+        "display_name": "Cost Basis (USD)",
+        "description": "Cost Basis or Average Cost, calculated as a quantity-weighted average converted to USD across all unexploded (non-basket) positions. Only applicable to non basket positions, as basket constituents do not have a known cost per share.",
+        "display_type": "dollars"
+      },
+      {
+        "name": "native_average_cost",
+        "display_name": "Cost Basis (Local CCY)",
+        "description": "Cost Basis or Average Cost, calculated as a quantity-weighted average in local currency across all unexploded (non-basket) positions. Only applicable to non basket positions, as basket constituents do not have a known cost per share.",
+        "display_type": "float"
+      },
+      {
+        "name": "whale_minnow_tag",
+        "display_name": "Whale/Minnow",
+        "description": "Tag to indicate whether instrument is a Whale (anchor of the trade) or Minnow (minor constituent) in a basket or None (for constituents in baskets not structured as Whale/Minnow)",
+        "display_type": "string"
+      },
+      {
+        "name": "nav",
+        "display_name": "NAV ($)",
+        "description": "Net Asset Value (NAV) for the period (in USD)",
+        "display_type": "dollars"
+      },
+      {
+        "name": "trading_volume",
+        "display_name": "Trading Volume",
+        "description": "Average daily trading volume of the instrument",
+        "display_type": "float"
+      },
+      {
+        "name": "venture_analyst",
+        "display_name": "Venture Analyst",
+        "description": "Venture Analyst name",
+        "display_type": "string"
+      },
+      {
+        "name": "venture_analyst_avatar",
+        "display_name": "Venture Analyst",
+        "description": "Venture Analyst avatar in the form email|first_name|last_name",
+        "display_type": "string"
+      },
+      {
+        "name": "company_id",
+        "display_name": "Company ID",
+        "description": "Internal company identifier (issuer_id)",
+        "display_type": "integer"
+      },
+      {
+        "name": "venture_analysts",
+        "display_name": "Venture Analyst(s)",
+        "description": "All Venture Analysts ever tagged to the company (active and historical)",
+        "display_type": "string"
+      },
+      {
+        "name": "venture_analyst_avatars",
+        "display_name": "Venture Analyst(s)",
+        "description": "Comma-joined avatars (email|first_name|last_name) of all Venture Analysts ever tagged to the company",
+        "display_type": "string"
+      },
+      {
+        "name": "moic",
+        "display_name": "MOIC",
+        "description": "[Total value of all PRIVATE and PUBLIC positions (if derived from a prior private DI position) + any distributions attributable to those positions] / [Total capital invested as a private investment]. If a DI subsequently becomes public, MOIC continues tracking using the original DI tax lot(s). Includes realized + unrealized value in the numerator. Covers the full investment period including both public and private phases, calculated using inception-to-date history.",
+        "display_type": "float"
+      },
+      {
+        "name": "xirr",
+        "display_name": "XIRR (ITD)",
+        "description": "The discount rate that, applied to the time series of DI purchase cash flows, produces a net present value of zero. The current value (private or public) is the final cash flow. ITD XIRR captures the full investment history including post-IPO performance. Covers the full investment period including both public and private phases, calculated using inception-to-date history.",
+        "display_type": "percent"
+      },
+      {
+        "name": "holding_period_years",
+        "display_name": "Holding Period (Yr)",
+        "description": "Date of first cash outflow to date of last cash inflow (if fully realized) or current date (if unrealized), expressed in years. Covers the full investment period including both public and private phases, calculated using inception-to-date history. Counted as calendar days.",
+        "display_type": "float"
+      },
+      {
+        "name": "total_invested_capital",
+        "display_name": "Total Invested",
+        "description": "Total capital deployed — the sum of all purchase costs for this investment from inception.",
+        "display_type": "dollars"
+      },
+      {
+        "name": "alpha",
+        "display_name": "Alpha",
+        "description": "Cumulative alpha vs the selected benchmark (default: XBI)",
+        "display_type": "percent"
+      },
+      {
+        "name": "alpha_vs_xbi",
+        "display_name": "Alpha (vs XBI US Equity)",
+        "description": "Alpha PnL vs XBI US Equity as a percentage of SOD NMV for the period, computed by subtracting Beta PnL from Total PnL (accounting for the benchmark Rtn and the exposure of the position or group), summed across all days in the period. Only includes days where SOD NMV (netted by issuer-liquidity) is greater than 20.0bps. Based on positions data available from Jan 1, 2021. Metrics may understate performance for investments initiated before 2021.",
+        "display_type": "percent"
+      },
+      {
+        "name": "alpha_vs_rgushsbt",
+        "display_name": "Alpha (vs RGUSHSBT Index)",
+        "description": "Alpha PnL vs RGUSHSBT Index as a percentage of SOD NMV for the period, computed by subtracting Beta PnL from Total PnL (accounting for the benchmark Rtn and the exposure of the position or group), summed across all days in the period. Only includes days where SOD NMV (netted by issuer-liquidity) is greater than 20.0bps. Based on positions data available from Jan 1, 2021. Metrics may understate performance for investments initiated before 2021.",
+        "display_type": "percent"
+      },
+      {
+        "name": "ta",
+        "display_name": "Therapeutic Area",
+        "description": "Therapeutic area of the company's drug programs (KG-derived). Each drug is attributed winner-take-all to the therapeutic area of its most-advanced indication, weighted by the drug's valuation-attribution weight and normalized per company.",
+        "display_type": "string"
+      },
+      {
+        "name": "modality",
+        "display_name": "Modality",
+        "description": "Drug modality / type of the company's drug programs (KG-derived, drug-level), weighted by the drug's valuation-attribution weight and normalized per company.",
+        "display_type": "string"
+      },
+      {
+        "name": "stage",
+        "display_name": "Dev Stage",
+        "description": "Development stage of the company's drug programs (KG-derived). Each drug is attributed winner-take-all to the stage of its most-advanced indication, weighted by the drug's valuation-attribution weight and normalized per company.",
+        "display_type": "string"
+      },
+      {
+        "name": "geography",
+        "display_name": "Drug Geography",
+        "description": "Region of the company's drug programs (KG-derived) — the region of the most-advanced/marketed geography of each drug's most-advanced indication, weighted by the drug's valuation-attribution weight and normalized per company. This is the drug program's region, NOT the security's country-of-risk or the company's headquarters.",
+        "display_type": "string"
+      }
+    ],
+    "filters": [
+      {
+        "name": "fund_name",
+        "display_name": "Fund Name",
+        "description": "Name of the Demo Fund",
+        "display_type": "string",
+        "values": null
+      },
+      {
+        "name": "company_subsector",
+        "display_name": "Demo Subsector",
+        "description": "Demo Subsector assigned to the company",
+        "display_type": "string",
+        "values": null
+      },
+      {
+        "name": "primary_analyst",
+        "display_name": "1° Analyst",
+        "description": "Primary Demo Analyst, Name",
+        "display_type": "string",
+        "values": null
+      },
+      {
+        "name": "direction",
+        "display_name": "Direction",
+        "description": "Net Direction of the total position (long or short) accounting for all held positions (Stock, Options, Swap, etc)",
+        "display_type": "string",
+        "values": null
+      },
+      {
+        "name": "market_cap",
+        "display_name": "Market Cap",
+        "description": "Market Cap (USD) of the company",
+        "display_type": "string",
+        "values": null
+      }
+    ],
+    "benchmarks": {
+      "DEMO": "Demo benchmark"
+    }
+  },
+  "sections": [
+    {
+      "key": "public_long",
+      "label": "Gross Long",
+      "filters": {
+        "illiquid_private": [
+          false
+        ],
+        "company_netted_direction": [
+          "Long"
+        ]
+      },
+      "detail_group_by": [
+        "company_security_code_portfolio_asset_class"
+      ],
+      "primary_metric": "net_exposure_percent"
+    },
+    {
+      "key": "privates",
+      "label": "Illiquid Privates",
+      "filters": {
+        "illiquid_private": [
+          true
+        ]
+      },
+      "detail_group_by": [
+        "company_security_code_portfolio_asset_class"
+      ],
+      "primary_metric": "net_exposure_percent"
+    },
+    {
+      "key": "public_short",
+      "label": "Gross Short",
+      "filters": {
+        "illiquid_private": [
+          false
+        ],
+        "company_netted_direction": [
+          "Short"
+        ]
+      },
+      "detail_group_by": [
+        "company_security_code_portfolio_asset_class"
+      ],
+      "primary_metric": "net_exposure_percent"
+    },
+    {
+      "key": "public_net",
+      "label": "Net Exposure",
+      "filters": {
+        "illiquid_private": [
+          false
+        ]
+      },
+      "detail_group_by": [
+        "company_security_code_portfolio_asset_class"
+      ],
+      "primary_metric": "net_exposure_percent"
+    },
+    {
+      "key": "company_netted_gmv",
+      "label": "Gross Exposure",
+      "filters": {},
+      "detail_group_by": [
+        "company_security_code_portfolio_asset_class"
+      ],
+      "primary_metric": "company_netted_gmv_percent_nav"
+    },
+    {
+      "key": "all_long",
+      "label": "Total Long",
+      "filters": {
+        "company_netted_direction": [
+          "Long"
+        ]
+      },
+      "detail_group_by": [
+        "company_security_code_portfolio_asset_class"
+      ],
+      "primary_metric": "net_exposure_percent"
+    },
+    {
+      "key": "minnows",
+      "label": "Minnows",
+      "filters": {
+        "whale_minnow_tag": [
+          "Minnow"
+        ]
+      },
+      "detail_group_by": [
+        "instrument_security_code"
+      ],
+      "primary_metric": "net_exposure_percent"
+    }
+  ],
+  "clients": {
+    "northstar": {
+      "name": "Northstar Capital",
+      "strategy": "Global equity long/short",
+      "positions": [
+        {
+          "ticker": "MSFT",
+          "name": "Microsoft",
+          "currency": "USD",
+          "quantity": 4200,
+          "price": 450,
+          "cost_basis": 423
+        },
+        {
+          "ticker": "ASML",
+          "name": "ASML Holding",
+          "currency": "EUR",
+          "quantity": 1600,
+          "price": 740,
+          "cost_basis": 705
+        },
+        {
+          "ticker": "TSLA",
+          "name": "Tesla",
+          "currency": "USD",
+          "quantity": -2600,
+          "price": 292,
+          "cost_basis": 310
+        }
+      ]
+    },
+    "harbor": {
+      "name": "Harbor Ridge Partners",
+      "strategy": "European equity long/short",
+      "positions": [
+        {
+          "ticker": "AZN",
+          "name": "AstraZeneca",
+          "currency": "GBP",
+          "quantity": 11500,
+          "price": 111,
+          "cost_basis": 103
+        },
+        {
+          "ticker": "SAP",
+          "name": "SAP",
+          "currency": "EUR",
+          "quantity": 6400,
+          "price": 219,
+          "cost_basis": 225
+        },
+        {
+          "ticker": "BP",
+          "name": "BP",
+          "currency": "GBP",
+          "quantity": -105000,
+          "price": 4.2,
+          "cost_basis": 4.35
+        }
+      ]
+    }
+  },
+  "fx": {
+    "source": "snapshot",
+    "date": "2025-01-02",
+    "rates": {
+      "EUR": 1.0,
+      "USD": 1.0321,
+      "GBP": 0.83118
+    }
+  }
+}

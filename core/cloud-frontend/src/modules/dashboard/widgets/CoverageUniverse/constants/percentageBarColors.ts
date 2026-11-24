@@ -1,0 +1,15 @@
+export const defaultPercentageBarColors = [
+  "#4D908E",
+  "#05734A",
+  "#BC5090",
+  "#D15832",
+  "#3787FF",
+  "#B264A2",
+  "#B9D7C0",
+  "#A8D6E7",
+  "#D5A8D3",
+  "#F5C5A0",
+  "#A0CDA0",
+  "#C7D8FF",
+  "#F4D1E1",
+];

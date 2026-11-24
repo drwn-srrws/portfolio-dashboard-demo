@@ -1,0 +1,209 @@
+.group-control {
+  .action {
+    padding: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    font-size: 18px;
+    cursor: pointer;
+
+    &:hover {
+      border-radius: 2px;
+      background-color: var(--dv-icon-hover-background-color);
+    }
+  }
+}
+
+.data-table {
+  table {
+    font-size: 11px;
+    th {
+      padding: 0px 8px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .split-view-container .sash-container .sash {
+    display: none;
+  }
+}
+
+.action-container {
+  display: flex;
+  padding: 4px 0px;
+  overflow: auto;
+
+  button {
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #1c254a;
+    color: white;
+    border: none;
+    cursor: pointer;
+    outline: 1px solid #4c65d4;
+
+    &:hover {
+      background-color: #222e62;
+    }
+  }
+
+  .text-button {
+    margin: 0px 4px;
+  }
+
+  .button-action {
+    margin: 0px 4px;
+
+    .selected {
+      background-color: #4864dc;
+    }
+  }
+
+  .button-group {
+    button {
+      margin-right: 0px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .dv-dockview .view-container {
+    display: flex;
+    flex-direction: column;
+    height: unset !important;
+    width: unset !important;
+    gap: 1rem;
+  }
+
+  .dv-dockview {
+    height: unset !important;
+  }
+
+  .dv-dockview .view-container .view {
+    position: unset;
+    top: unset;
+    left: unset;
+    right: unset;
+    bottom: unset;
+    height: unset !important;
+    width: unset !important;
+    overflow: unset;
+  }
+}
+
+.dockview-table-header {
+  height: 42px;
+  gap: 9px;
+}
+
+.ag-pinned-right-header .right-pinned {
+  border-left: 1px solid var(--neutral-800);
+}
+
+.ag-pinned-right-cols-container .right-pinned {
+  left: 1px !important;
+  border-left: 1px solid var(--neutral-800) !important;
+}
+
+.dockview-table-header .ag-header-cell-text {
+  color: hsl(var(--neutral-400));
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.25rem;
+  letter-spacing: -0.2px;
+  text-transform: uppercase;
+}
+
+.ag-theme-quartz {
+  height: 100% !important;
+}
+
+.border-top-no-radius .ag-root-wrapper {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+.ag-sparkline-tooltip-wrapper {
+  z-index: 10;
+}
+
+.tabs-and-actions-container {
+  background-color: transparent !important;
+}
+
+.tab.active-tab {
+  background-color: transparent !important;
+}
+
+.tab.active-tab::after {
+  outline: none !important;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+  background-color: hsla(var(--neutral-950), 0.6) !important;
+}
+
+.dv-default-tab-action {
+  display: none !important;
+}
+
+.groupview {
+  position: relative;
+}
+
+.groupview .tabs-and-actions-container {
+  position: absolute;
+  top: 12px;
+  left: 6px;
+  width: 40px;
+  height: 40px;
+  z-index: 3;
+  overflow: hidden;
+  cursor: grab;
+}
+
+.groupview .tabs-and-actions-container {
+  position: absolute;
+  top: 12px;
+  left: 6px;
+  z-index: 3;
+  overflow: hidden;
+  cursor: grab;
+}
+
+.dockview-mode-edit .groupview .tabs-and-actions-container {
+  display: flex;
+}
+
+.dockview-mode-create .groupview .tabs-and-actions-container {
+  display: flex;
+}
+
+.dockview-mode-view .groupview .tabs-and-actions-container {
+  display: none;
+}
+
+.groupview .tabs-and-actions-container .dockview-react-part,
+.groupview .tabs-and-actions-container .dv-default-tab,
+.groupview .tabs-and-actions-container .tab.active-tab {
+  z-index: 2;
+  cursor: grab;
+  width: 40px;
+  height: 40px;
+  min-width: 40px;
+}
+
+.dv-default-tab-content {
+  display: none !important;
+}
+
+.tabs-container {
+  overflow: hidden !important;
+}
+
+.dv-dockview .sash {
+  z-index: 50 !important;
+}

@@ -1,0 +1,4769 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "Hedge Fund Demo",
+    "version": "0.1.0"
+  },
+  "paths": {
+    "/api/dev/clients": {
+      "get": {
+        "summary": "Clients",
+        "operationId": "clients_api_dev_clients_get",
+        "parameters": [
+          {
+            "name": "hed_demo_session",
+            "in": "cookie",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Hed Demo Session"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/dev/clients/{client_id}/portfolio": {
+      "get": {
+        "summary": "Portfolio",
+        "operationId": "portfolio_api_dev_clients__client_id__portfolio_get",
+        "parameters": [
+          {
+            "name": "client_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "title": "Client Id"
+            }
+          },
+          {
+            "name": "hed_demo_session",
+            "in": "cookie",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Hed Demo Session"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/dev/frontend-config": {
+      "get": {
+        "summary": "Frontend Config",
+        "operationId": "frontend_config_api_dev_frontend_config_get",
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/dev/notifications/api/alerts": {
+      "get": {
+        "summary": "Alerts",
+        "operationId": "alerts_api_dev_notifications_api_alerts_get",
+        "parameters": [
+          {
+            "name": "hed_demo_session",
+            "in": "cookie",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Hed Demo Session"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/dev/v2/data/latest-dates": {
+      "get": {
+        "summary": "Latest Dates",
+        "operationId": "latest_dates_api_dev_v2_data_latest_dates_get",
+        "parameters": [
+          {
+            "name": "hed_demo_session",
+            "in": "cookie",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Hed Demo Session"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {}
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/dev/portfolio-metrics/catalog": {
+      "get": {
+        "tags": [
+          "portfolio-metrics"
+        ],
+        "summary": "Get Portfolio Metrics Catalog",
+        "operationId": "get_portfolio_metrics_catalog_api_dev_portfolio_metrics_catalog_get",
+        "parameters": [
+          {
+            "name": "include_filterable_values",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "boolean",
+              "default": false,
+              "title": "Include Filterable Values"
+            }
+          },
+          {
+            "name": "hed_demo_session",
+            "in": "cookie",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Hed Demo Session"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CatalogResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/dev/portfolio-metrics/fund-summary": {
+      "post": {
+        "tags": [
+          "portfolio-metrics"
+        ],
+        "summary": "Get Fund Summary",
+        "operationId": "get_fund_summary_api_dev_portfolio_metrics_fund_summary_post",
+        "parameters": [
+          {
+            "name": "hed_demo_session",
+            "in": "cookie",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Hed Demo Session"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/FundSummaryRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/FundSummaryResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/dev/portfolio-metrics/fund-summary/config": {
+      "get": {
+        "tags": [
+          "portfolio-metrics"
+        ],
+        "summary": "Get Fund Summary Config",
+        "operationId": "get_fund_summary_config_api_dev_portfolio_metrics_fund_summary_config_get",
+        "parameters": [
+          {
+            "name": "hed_demo_session",
+            "in": "cookie",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Hed Demo Session"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/FundSummaryConfigResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/dev/portfolio-metrics/position-differences": {
+      "post": {
+        "tags": [
+          "portfolio-metrics"
+        ],
+        "summary": "Get Position Differences",
+        "operationId": "get_position_differences_api_dev_portfolio_metrics_position_differences_post",
+        "parameters": [
+          {
+            "name": "hed_demo_session",
+            "in": "cookie",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Hed Demo Session"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PositionDifferencesRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PositionDifferencesResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/dev/portfolio-metrics/position-differences/config": {
+      "get": {
+        "tags": [
+          "portfolio-metrics"
+        ],
+        "summary": "Get Position Differences Config",
+        "operationId": "get_position_differences_config_api_dev_portfolio_metrics_position_differences_config_get",
+        "parameters": [
+          {
+            "name": "hed_demo_session",
+            "in": "cookie",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Hed Demo Session"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PositionDifferencesConfigResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/dev/portfolio-metrics/market-cap-distribution": {
+      "post": {
+        "tags": [
+          "portfolio-metrics"
+        ],
+        "summary": "Get Market Cap Distribution",
+        "operationId": "get_market_cap_distribution_api_dev_portfolio_metrics_market_cap_distribution_post",
+        "parameters": [
+          {
+            "name": "hed_demo_session",
+            "in": "cookie",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Hed Demo Session"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/MarketCapDistributionRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/MarketCapDistributionResponse"
+                  },
+                  "title": "Response Get Market Cap Distribution Api Dev Portfolio Metrics Market Cap Distribution Post"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/dev/portfolio-metrics/market-cap-distribution/config": {
+      "get": {
+        "tags": [
+          "portfolio-metrics"
+        ],
+        "summary": "Get Market Cap Distribution Config",
+        "operationId": "get_market_cap_distribution_config_api_dev_portfolio_metrics_market_cap_distribution_config_get",
+        "parameters": [
+          {
+            "name": "hed_demo_session",
+            "in": "cookie",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Hed Demo Session"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/MarketCapDistributionConfigResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/dev/portfolio-metrics/liquidity-summary": {
+      "post": {
+        "tags": [
+          "portfolio-metrics"
+        ],
+        "summary": "Get Liquidity Summary",
+        "operationId": "get_liquidity_summary_api_dev_portfolio_metrics_liquidity_summary_post",
+        "parameters": [
+          {
+            "name": "hed_demo_session",
+            "in": "cookie",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Hed Demo Session"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/LiquiditySummaryRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/LiquiditySummaryResponse"
+                  },
+                  "title": "Response Get Liquidity Summary Api Dev Portfolio Metrics Liquidity Summary Post"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/dev/portfolio-metrics/liquidity-summary/config": {
+      "get": {
+        "tags": [
+          "portfolio-metrics"
+        ],
+        "summary": "Get Liquidity Summary Config",
+        "operationId": "get_liquidity_summary_config_api_dev_portfolio_metrics_liquidity_summary_config_get",
+        "parameters": [
+          {
+            "name": "hed_demo_session",
+            "in": "cookie",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Hed Demo Session"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LiquiditySummaryConfigResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/dev/portfolio-metrics/kg-exposure": {
+      "post": {
+        "tags": [
+          "portfolio-metrics"
+        ],
+        "summary": "Get Kg Exposure",
+        "operationId": "get_kg_exposure_api_dev_portfolio_metrics_kg_exposure_post",
+        "parameters": [
+          {
+            "name": "hed_demo_session",
+            "in": "cookie",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Hed Demo Session"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/KgExposureRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/KgExposureResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/dev/portfolio-metrics/kg-exposure/config": {
+      "get": {
+        "tags": [
+          "portfolio-metrics"
+        ],
+        "summary": "Get Kg Exposure Config",
+        "operationId": "get_kg_exposure_config_api_dev_portfolio_metrics_kg_exposure_config_get",
+        "parameters": [
+          {
+            "name": "hed_demo_session",
+            "in": "cookie",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Hed Demo Session"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/KgExposureConfigResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/dev/portfolio-metrics/analyst-breakdown": {
+      "post": {
+        "tags": [
+          "portfolio-metrics"
+        ],
+        "summary": "Get Analyst Breakdown",
+        "operationId": "get_analyst_breakdown_api_dev_portfolio_metrics_analyst_breakdown_post",
+        "parameters": [
+          {
+            "name": "hed_demo_session",
+            "in": "cookie",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Hed Demo Session"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AnalystBreakdownRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AnalystBreakdownResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/dev/portfolio-metrics/analyst-breakdown/config": {
+      "get": {
+        "tags": [
+          "portfolio-metrics"
+        ],
+        "summary": "Get Analyst Breakdown Config",
+        "operationId": "get_analyst_breakdown_config_api_dev_portfolio_metrics_analyst_breakdown_config_get",
+        "parameters": [
+          {
+            "name": "hed_demo_session",
+            "in": "cookie",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Hed Demo Session"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/AnalystBreakdownConfigResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/dev/portfolio-metrics/fund-breakdown": {
+      "post": {
+        "tags": [
+          "portfolio-metrics"
+        ],
+        "summary": "Get Fund Breakdown",
+        "operationId": "get_fund_breakdown_api_dev_portfolio_metrics_fund_breakdown_post",
+        "parameters": [
+          {
+            "name": "hed_demo_session",
+            "in": "cookie",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Hed Demo Session"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/FundBreakdownRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/FundBreakdownResponse"
+                  },
+                  "title": "Response Get Fund Breakdown Api Dev Portfolio Metrics Fund Breakdown Post"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/dev/portfolio-metrics/fund-breakdown/config": {
+      "get": {
+        "tags": [
+          "portfolio-metrics"
+        ],
+        "summary": "Get Fund Breakdown Config",
+        "operationId": "get_fund_breakdown_config_api_dev_portfolio_metrics_fund_breakdown_config_get",
+        "parameters": [
+          {
+            "name": "hed_demo_session",
+            "in": "cookie",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Hed Demo Session"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/FundBreakdownConfigResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/dev/portfolio-metrics/benchmark-and-fund-performance": {
+      "post": {
+        "tags": [
+          "portfolio-metrics"
+        ],
+        "summary": "Get Benchmark And Fund Performance",
+        "operationId": "get_benchmark_and_fund_performance_api_dev_portfolio_metrics_benchmark_and_fund_performance_post",
+        "parameters": [
+          {
+            "name": "hed_demo_session",
+            "in": "cookie",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Hed Demo Session"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/BenchmarkAndFundPerformanceRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BenchmarkAndFundPerformanceResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/dev/portfolio-metrics/performance-overview": {
+      "post": {
+        "tags": [
+          "portfolio-metrics"
+        ],
+        "summary": "Get Performance Overview",
+        "operationId": "get_performance_overview_api_dev_portfolio_metrics_performance_overview_post",
+        "parameters": [
+          {
+            "name": "hed_demo_session",
+            "in": "cookie",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Hed Demo Session"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/PerformanceOverviewRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/PerformanceOverviewResponse"
+                  },
+                  "title": "Response Get Performance Overview Api Dev Portfolio Metrics Performance Overview Post"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/dev/portfolio-metrics/performance-overview/config": {
+      "get": {
+        "tags": [
+          "portfolio-metrics"
+        ],
+        "summary": "Get Performance Overview Config",
+        "operationId": "get_performance_overview_config_api_dev_portfolio_metrics_performance_overview_config_get",
+        "parameters": [
+          {
+            "name": "hed_demo_session",
+            "in": "cookie",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Hed Demo Session"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/PerformanceOverviewConfigResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/dev/portfolio-metrics/top-winners-and-losers-investment": {
+      "post": {
+        "tags": [
+          "portfolio-metrics"
+        ],
+        "summary": "Get Top Winners And Losers Investment",
+        "operationId": "get_top_winners_and_losers_investment_api_dev_portfolio_metrics_top_winners_and_losers_investment_post",
+        "parameters": [
+          {
+            "name": "hed_demo_session",
+            "in": "cookie",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Hed Demo Session"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/TopWinnersAndLosersInvestmentRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/TopWinnersAndLosersInvestmentResponse"
+                  },
+                  "title": "Response Get Top Winners And Losers Investment Api Dev Portfolio Metrics Top Winners And Losers Investment Post"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/dev/portfolio-metrics/top-winners-and-losers-investment/config": {
+      "get": {
+        "tags": [
+          "portfolio-metrics"
+        ],
+        "summary": "Get Top Winners And Losers Investment Config",
+        "operationId": "get_top_winners_and_losers_investment_config_api_dev_portfolio_metrics_top_winners_and_losers_investment_config_get",
+        "parameters": [
+          {
+            "name": "hed_demo_session",
+            "in": "cookie",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Hed Demo Session"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TopWinnersAndLosersInvestmentConfigResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/dev/portfolio-metrics/top-winners-and-losers-analyst": {
+      "post": {
+        "tags": [
+          "portfolio-metrics"
+        ],
+        "summary": "Get Top Winners And Losers Analyst",
+        "operationId": "get_top_winners_and_losers_analyst_api_dev_portfolio_metrics_top_winners_and_losers_analyst_post",
+        "parameters": [
+          {
+            "name": "hed_demo_session",
+            "in": "cookie",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Hed Demo Session"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/TopWinnersAndLosersAnalystRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/TopWinnersAndLosersAnalystResponse"
+                  },
+                  "title": "Response Get Top Winners And Losers Analyst Api Dev Portfolio Metrics Top Winners And Losers Analyst Post"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/dev/portfolio-metrics/top-winners-and-losers-analyst/config": {
+      "get": {
+        "tags": [
+          "portfolio-metrics"
+        ],
+        "summary": "Get Top Winners And Losers Analyst Config",
+        "operationId": "get_top_winners_and_losers_analyst_config_api_dev_portfolio_metrics_top_winners_and_losers_analyst_config_get",
+        "parameters": [
+          {
+            "name": "hed_demo_session",
+            "in": "cookie",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Hed Demo Session"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/TopWinnersAndLosersAnalystConfigResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/dev/portfolio-metrics/batting-slugging": {
+      "post": {
+        "tags": [
+          "portfolio-metrics"
+        ],
+        "summary": "Get Batting Slugging",
+        "operationId": "get_batting_slugging_api_dev_portfolio_metrics_batting_slugging_post",
+        "parameters": [
+          {
+            "name": "hed_demo_session",
+            "in": "cookie",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Hed Demo Session"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/BattingSluggingRequest"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/BattingSluggingResponse"
+                  },
+                  "title": "Response Get Batting Slugging Api Dev Portfolio Metrics Batting Slugging Post"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/dev/portfolio-metrics/batting-slugging/config": {
+      "get": {
+        "tags": [
+          "portfolio-metrics"
+        ],
+        "summary": "Get Batting Slugging Config",
+        "operationId": "get_batting_slugging_config_api_dev_portfolio_metrics_batting_slugging_config_get",
+        "parameters": [
+          {
+            "name": "hed_demo_session",
+            "in": "cookie",
+            "required": false,
+            "schema": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "null"
+                }
+              ],
+              "title": "Hed Demo Session"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Response",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BattingSluggingConfigResponse"
+                }
+              }
+            }
+          },
+          "422": {
+            "description": "Validation Error",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTTPValidationError"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "AnalystBreakdownConfigResponse": {
+        "properties": {
+          "metadata": {
+            "$ref": "#/components/schemas/BaseCardConfigMetadata",
+            "description": "Configuration metadata for analyst breakdown"
+          }
+        },
+        "type": "object",
+        "required": [
+          "metadata"
+        ],
+        "title": "AnalystBreakdownConfigResponse",
+        "description": "Response for Analyst Breakdown configuration endpoint."
+      },
+      "AnalystBreakdownRequest": {
+        "properties": {
+          "date_range": {
+            "$ref": "#/components/schemas/DateRangeRequest",
+            "description": "Date range for the metrics calculation. Defaults to YTD (January 1st of current year to today in UTC)"
+          },
+          "filters": {
+            "$ref": "#/components/schemas/CommonFilters",
+            "description": "Optional filters to apply"
+          }
+        },
+        "type": "object",
+        "title": "AnalystBreakdownRequest",
+        "description": "Request model for Analyst Breakdown metrics\n\nThis endpoint returns net_exposure and cumulative_pnl_percent_nav for each analyst\nin both their primary and secondary analyst roles, merged into a single response."
+      },
+      "AnalystBreakdownResponse": {
+        "properties": {
+          "metadata": {
+            "$ref": "#/components/schemas/DataResponseMetadata",
+            "description": "Query metadata (date range, filters applied, etc.)"
+          },
+          "data": {
+            "items": {
+              "$ref": "#/components/schemas/AnalystBreakdownStats"
+            },
+            "type": "array",
+            "title": "Data",
+            "description": "List of analyst breakdown statistics"
+          }
+        },
+        "type": "object",
+        "required": [
+          "metadata",
+          "data"
+        ],
+        "title": "AnalystBreakdownResponse",
+        "description": "Response model for Analyst Breakdown metrics"
+      },
+      "AnalystBreakdownStats": {
+        "properties": {
+          "analyst": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Analyst",
+            "description": "Analyst name"
+          },
+          "analyst_avatar": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Analyst Avatar",
+            "description": "Analyst avatar identifier (email|first|last)"
+          },
+          "primary_analyst_net_exposure": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Primary Analyst Net Exposure",
+            "description": "Net exposure when grouped as primary analyst."
+          },
+          "primary_analyst_cumulative_pnl_percent_nav": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Primary Analyst Cumulative Pnl Percent Nav",
+            "description": "Cumulative PnL (% NAV) when grouped as primary analyst."
+          },
+          "secondary_analyst_net_exposure": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Secondary Analyst Net Exposure",
+            "description": "Net exposure when grouped as secondary analyst."
+          },
+          "secondary_analyst_cumulative_pnl_percent_nav": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Secondary Analyst Cumulative Pnl Percent Nav",
+            "description": "Cumulative PnL (% NAV) when grouped as secondary analyst."
+          }
+        },
+        "type": "object",
+        "title": "AnalystBreakdownStats",
+        "description": "Statistics for Analyst Breakdown — merged primary and secondary analyst metrics."
+      },
+      "AnalystStats": {
+        "properties": {
+          "primary_analyst": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Primary Analyst",
+            "description": "Primary Demo Analyst, Name"
+          },
+          "direction": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Direction",
+            "description": "Net Direction of the total position (long or short) accounting for all held positions (Stock, Options, Swap, etc)"
+          },
+          "total_number_of_trades": {
+            "type": "integer",
+            "title": "Total Number Of Trades",
+            "description": "Total number of trades over the period"
+          },
+          "number_of_wins": {
+            "type": "integer",
+            "title": "Number Of Wins",
+            "description": "Count of companies that had a positive PnL over the period"
+          },
+          "number_of_losses": {
+            "type": "integer",
+            "title": "Number Of Losses",
+            "description": "Count of companies that had a negative PnL over the period"
+          },
+          "hit_rate": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Hit Rate",
+            "description": "The percent of winning trades as a percentage of all trades"
+          },
+          "slugging_ratio": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Slugging Ratio",
+            "description": "Ratio of average performance of winning trades vs the absolute value of average performance of losing trades"
+          },
+          "avg_win_pnl_percent_nav": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Avg Win Pnl Percent Nav",
+            "description": "Average profit as a percentage of NAV of winning trades"
+          },
+          "avg_loss_pnl_percent_nav": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Avg Loss Pnl Percent Nav",
+            "description": "Average losses as a percentage of NAV of losing trades"
+          },
+          "company_security_code_portfolio_asset_class": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Company Security Code Demo Asset Class",
+            "description": "Company security code combined with Demo asset class"
+          },
+          "company_subsector": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Company Subsector",
+            "description": "Demo Subsector assigned to the company"
+          },
+          "primary_analyst_avatar": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Primary Analyst Avatar",
+            "description": "Primary Demo Analyst, avatar"
+          }
+        },
+        "type": "object",
+        "required": [
+          "total_number_of_trades",
+          "number_of_wins",
+          "number_of_losses",
+          "hit_rate",
+          "slugging_ratio",
+          "avg_win_pnl_percent_nav",
+          "avg_loss_pnl_percent_nav"
+        ],
+        "title": "AnalystStats",
+        "description": "Statistics for a single analyst"
+      },
+      "BaseCardConfigMetadata": {
+        "properties": {
+          "supported_filters": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Supported Filters",
+            "description": "List of supported filter fields for this endpoint"
+          },
+          "date_range": {
+            "$ref": "#/components/schemas/DateRangeRequest",
+            "description": "Default date range for this endpoint"
+          },
+          "display_name_map": {
+            "additionalProperties": {
+              "type": "string"
+            },
+            "type": "object",
+            "title": "Display Name Map",
+            "description": "Map of column name -> human-readable display name for every metric, dimension, and filter referenced by this card. Allows the frontend to render headers without calling /catalog. Computed from allowlisted list[str] fields at serialization time.",
+            "readOnly": true
+          }
+        },
+        "type": "object",
+        "required": [
+          "supported_filters",
+          "display_name_map"
+        ],
+        "title": "BaseCardConfigMetadata",
+        "description": "Base configuration metadata for card endpoints.\n\nUsed by consolidated endpoints (market-cap-distribution, liquidity-summary,\nfund-breakdown) where group_by is handled internally by the backend."
+      },
+      "BaseSortConfig": {
+        "properties": {
+          "sort_by": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Sort By",
+            "description": "Columns to sort by",
+            "default": []
+          },
+          "sort_descending": {
+            "type": "boolean",
+            "title": "Sort Descending",
+            "description": "Sort in descending order",
+            "default": true
+          }
+        },
+        "type": "object",
+        "title": "BaseSortConfig",
+        "description": "Base sort configuration for metrics endpoints.\n\nProvides a simple sort pattern with columns to sort by and a single\ndescending flag that applies to all columns."
+      },
+      "BattingSluggingConfigResponse": {
+        "properties": {
+          "metadata": {
+            "$ref": "#/components/schemas/CardConfigMetadata",
+            "description": "Configuration metadata for batting/slugging"
+          }
+        },
+        "type": "object",
+        "required": [
+          "metadata"
+        ],
+        "title": "BattingSluggingConfigResponse",
+        "description": "Response for batting/slugging configuration endpoint"
+      },
+      "BattingSluggingRequest": {
+        "properties": {
+          "date_range": {
+            "$ref": "#/components/schemas/DateRangeRequest",
+            "description": "Date range for the metrics calculation. Defaults to YTD (January 1st of current year to today in UTC)"
+          },
+          "filters": {
+            "$ref": "#/components/schemas/CommonFilters",
+            "description": "Optional filters to apply"
+          },
+          "pnl_threshold": {
+            "type": "number",
+            "maximum": 1.0,
+            "minimum": 0.0,
+            "title": "Pnl Threshold",
+            "description": "PnL threshold (%) for win/loss classification",
+            "default": 0.005,
+            "openapi_examples": {
+              "default": {
+                "summary": "0.5% threshold",
+                "description": "Trades above +0.5% are wins, below -0.5% are losses",
+                "value": "default"
+              },
+              "strict": {
+                "description": "Stricter threshold for win/loss classification",
+                "summary": "1% threshold",
+                "value": "strict"
+              }
+            }
+          },
+          "min_trades": {
+            "type": "integer",
+            "minimum": 0.0,
+            "title": "Min Trades",
+            "description": "Minimum number of trades to include analyst in results",
+            "default": 0
+          },
+          "group_by": {
+            "anyOf": [
+              {
+                "items": {
+                  "type": "string",
+                  "enum": [
+                    "primary_analyst",
+                    "direction",
+                    "company_subsector",
+                    "company_security_code_portfolio_asset_class"
+                  ]
+                },
+                "type": "array"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Group By",
+            "description": "Group results by dimensions (e.g., ['primary_analyst', 'direction'])",
+            "default": [
+              "primary_analyst"
+            ],
+            "openapi_examples": {
+              "company_subsector": {
+                "description": "Break down stats by company subsector",
+                "summary": "Group by company subsector",
+                "value": [
+                  "company_subsector"
+                ]
+              },
+              "default": {
+                "summary": "Group by primary analyst",
+                "description": "Aggregate all trades per primary analyst",
+                "value": [
+                  "primary_analyst"
+                ]
+              },
+              "direction": {
+                "description": "Break down stats by long/short direction",
+                "summary": "Group by direction",
+                "value": [
+                  "direction"
+                ]
+              }
+            }
+          },
+          "sort": {
+            "$ref": "#/components/schemas/BaseSortConfig",
+            "description": "Sort configuration for the results"
+          }
+        },
+        "type": "object",
+        "title": "BattingSluggingRequest",
+        "description": "Request for batting/slugging statistics"
+      },
+      "BattingSluggingResponse": {
+        "properties": {
+          "metadata": {
+            "$ref": "#/components/schemas/DataResponseMetadata",
+            "description": "Query metadata (date range, filters applied, etc.)"
+          },
+          "data": {
+            "items": {
+              "$ref": "#/components/schemas/AnalystStats"
+            },
+            "type": "array",
+            "title": "Data",
+            "description": "List of analyst statistics"
+          }
+        },
+        "type": "object",
+        "required": [
+          "metadata",
+          "data"
+        ],
+        "title": "BattingSluggingResponse",
+        "description": "Response for batting/slugging statistics data"
+      },
+      "BenchmarkAndFundPerformanceRequest": {
+        "properties": {
+          "date_range": {
+            "$ref": "#/components/schemas/DateRangeRequest",
+            "description": "Date range for the metrics calculation. Defaults to YTD (January 1st of current year to today in UTC)"
+          },
+          "filters": {
+            "$ref": "#/components/schemas/CommonFilters",
+            "description": "Optional filters to apply"
+          },
+          "group_by": {
+            "anyOf": [
+              {
+                "items": {
+                  "type": "string"
+                },
+                "type": "array"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Group By",
+            "description": "Group results by dimensions"
+          },
+          "sort": {
+            "$ref": "#/components/schemas/BaseSortConfig",
+            "description": "Sort configuration for the results"
+          },
+          "benchmark_names": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Benchmark Names",
+            "description": "List of benchmark names. Defaults to all configured benchmarks."
+          },
+          "fund_names": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Fund Names",
+            "description": "List of fund names. Defaults to all funds."
+          }
+        },
+        "type": "object",
+        "title": "BenchmarkAndFundPerformanceRequest",
+        "description": "Request for benchmark performance statistics"
+      },
+      "BenchmarkAndFundPerformanceResponse": {
+        "properties": {
+          "metadata": {
+            "$ref": "#/components/schemas/DataResponseMetadata",
+            "description": "Query metadata (date range, filters applied, etc.)"
+          },
+          "data": {
+            "items": {
+              "$ref": "#/components/schemas/BenchmarkAndFundPerformanceStats"
+            },
+            "type": "array",
+            "title": "Data",
+            "description": "List of benchmark performance statistics"
+          }
+        },
+        "type": "object",
+        "required": [
+          "metadata",
+          "data"
+        ],
+        "title": "BenchmarkAndFundPerformanceResponse",
+        "description": "Response for benchmark performance statistics"
+      },
+      "BenchmarkAndFundPerformanceStats": {
+        "properties": {
+          "name": {
+            "type": "string",
+            "title": "Name"
+          },
+          "daily_pnl_percent_nav": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Daily Pnl Percent Nav",
+            "description": "Daily PnL as percentage of NAV"
+          },
+          "mtd_pnl_percent_nav": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Mtd Pnl Percent Nav",
+            "description": "MTD PnL as percentage of NAV"
+          },
+          "qtd_pnl_percent_nav": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Qtd Pnl Percent Nav",
+            "description": "QTD PnL as percentage of NAV"
+          },
+          "ytd_pnl_percent_nav": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Ytd Pnl Percent Nav",
+            "description": "YTD PnL as percentage of NAV"
+          }
+        },
+        "type": "object",
+        "required": [
+          "name",
+          "daily_pnl_percent_nav",
+          "mtd_pnl_percent_nav",
+          "qtd_pnl_percent_nav",
+          "ytd_pnl_percent_nav"
+        ],
+        "title": "BenchmarkAndFundPerformanceStats"
+      },
+      "CardConfigMetadata": {
+        "properties": {
+          "supported_filters": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Supported Filters",
+            "description": "List of supported filter fields for this endpoint"
+          },
+          "date_range": {
+            "$ref": "#/components/schemas/DateRangeRequest",
+            "description": "Default date range for this endpoint"
+          },
+          "group_by_config": {
+            "$ref": "#/components/schemas/GroupByConfig",
+            "description": "Available group_by options for this endpoint"
+          },
+          "group_config_default": {
+            "$ref": "#/components/schemas/GroupByConfig",
+            "description": "Default group_by selections for this endpoint"
+          },
+          "display_name_map": {
+            "additionalProperties": {
+              "type": "string"
+            },
+            "type": "object",
+            "title": "Display Name Map",
+            "description": "Map of column name -> human-readable display name for every metric, dimension, and filter referenced by this card. Allows the frontend to render headers without calling /catalog. Computed from allowlisted list[str] fields at serialization time.",
+            "readOnly": true
+          }
+        },
+        "type": "object",
+        "required": [
+          "supported_filters",
+          "group_by_config",
+          "group_config_default",
+          "display_name_map"
+        ],
+        "title": "CardConfigMetadata",
+        "description": "Extended configuration metadata for endpoints with group_by selection.\n\nExtends BaseCardConfigMetadata with group_by configuration options for\nendpoints where the frontend can select grouping dimensions."
+      },
+      "CatalogResponse": {
+        "properties": {
+          "metrics": {
+            "items": {
+              "$ref": "#/components/schemas/PortfolioMetricCatalogItem"
+            },
+            "type": "array",
+            "title": "Metrics",
+            "description": "List of available metrics with metadata"
+          },
+          "filters": {
+            "items": {
+              "$ref": "#/components/schemas/FilterCatalogItem"
+            },
+            "type": "array",
+            "title": "Filters",
+            "description": "List of available filters with metadata"
+          },
+          "benchmarks": {
+            "additionalProperties": {
+              "type": "string"
+            },
+            "type": "object",
+            "title": "Benchmarks",
+            "description": "Available benchmarks (benchmark_id -> display_name)"
+          }
+        },
+        "type": "object",
+        "required": [
+          "metrics",
+          "filters",
+          "benchmarks"
+        ],
+        "title": "CatalogResponse",
+        "description": "Response model for the catalog endpoint"
+      },
+      "CommonFilters": {
+        "properties": {
+          "fund_id": {
+            "anyOf": [
+              {
+                "items": {
+                  "type": "integer"
+                },
+                "type": "array"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Fund Id",
+            "description": "Filter by fund IDs"
+          },
+          "primary_analyst": {
+            "anyOf": [
+              {
+                "items": {
+                  "type": "string"
+                },
+                "type": "array"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Primary Analyst",
+            "description": "Filter by primary analysts"
+          },
+          "direction": {
+            "anyOf": [
+              {
+                "items": {
+                  "type": "string"
+                },
+                "type": "array"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Direction",
+            "description": "Filter by direction"
+          },
+          "company_security_code_portfolio_asset_class": {
+            "anyOf": [
+              {
+                "items": {
+                  "type": "string"
+                },
+                "type": "array"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Company Security Code Demo Asset Class",
+            "description": "Filter by company security code Demo asset class"
+          },
+          "company_security_code": {
+            "anyOf": [
+              {
+                "items": {
+                  "type": "string"
+                },
+                "type": "array"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Company Security Code",
+            "description": "Filter by company security code"
+          },
+          "company_subsector": {
+            "anyOf": [
+              {
+                "items": {
+                  "type": "string"
+                },
+                "type": "array"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Company Subsector",
+            "description": "Filter by company subsector"
+          },
+          "fund_name": {
+            "anyOf": [
+              {
+                "items": {
+                  "type": "string"
+                },
+                "type": "array"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Fund Name",
+            "description": "Filter by fund name"
+          },
+          "instrument_asset_class": {
+            "anyOf": [
+              {
+                "items": {
+                  "type": "string"
+                },
+                "type": "array"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Instrument Asset Class",
+            "description": "Filter by instrument asset class (EQUITY/FX/OTHER/RATES/CREDIT)"
+          },
+          "instrument_portfolio_asset_class": {
+            "anyOf": [
+              {
+                "items": {
+                  "type": "string"
+                },
+                "type": "array"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Instrument Demo Asset Class",
+            "description": "Filter by Demo asset class of the instrument"
+          },
+          "secondary_analyst": {
+            "anyOf": [
+              {
+                "items": {
+                  "type": "string"
+                },
+                "type": "array"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Secondary Analyst",
+            "description": "Filter by secondary analysts"
+          },
+          "instrument_group": {
+            "anyOf": [
+              {
+                "items": {
+                  "type": "string"
+                },
+                "type": "array"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Instrument Group",
+            "description": "Filter by instrument group"
+          },
+          "instrument_name": {
+            "anyOf": [
+              {
+                "items": {
+                  "type": "string"
+                },
+                "type": "array"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Instrument Name",
+            "description": "Filter by instrument name"
+          },
+          "instrument_security_code": {
+            "anyOf": [
+              {
+                "items": {
+                  "type": "string"
+                },
+                "type": "array"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Instrument Security Code",
+            "description": "Filter by instrument security code"
+          },
+          "position_instrument_name": {
+            "anyOf": [
+              {
+                "items": {
+                  "type": "string"
+                },
+                "type": "array"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Position Instrument Name",
+            "description": "Filter by position instrument name"
+          },
+          "position_instrument_asset_type": {
+            "anyOf": [
+              {
+                "items": {
+                  "type": "string"
+                },
+                "type": "array"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Position Instrument Asset Type",
+            "description": "Filter by position instrument asset type (e.g., BASKET, STOCK)"
+          },
+          "position_instrument_security_code": {
+            "anyOf": [
+              {
+                "items": {
+                  "type": "string"
+                },
+                "type": "array"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Position Instrument Security Code",
+            "description": "Filter by position instrument security code"
+          },
+          "market_cap": {
+            "anyOf": [
+              {
+                "items": {
+                  "type": "string"
+                },
+                "type": "array"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Market Cap",
+            "description": "Filter by market cap"
+          },
+          "portfolio_team": {
+            "anyOf": [
+              {
+                "items": {
+                  "type": "string"
+                },
+                "type": "array"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Demo Team",
+            "description": "Filter by Demo team (e.g., Medical Technology, Therapeutics)"
+          },
+          "whale_minnow_tag": {
+            "anyOf": [
+              {
+                "items": {
+                  "type": "string"
+                },
+                "type": "array"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Whale Minnow Tag",
+            "description": "Filter by whale/minnow tag (e.g., 'Whale', 'Minnow')"
+          },
+          "illiquid_private": {
+            "anyOf": [
+              {
+                "items": {
+                  "type": "boolean"
+                },
+                "type": "array"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Illiquid Private",
+            "description": "Filter by illiquid private classification (true/false)"
+          },
+          "company_netted_direction": {
+            "anyOf": [
+              {
+                "items": {
+                  "type": "string"
+                },
+                "type": "array"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Company Netted Direction",
+            "description": "Filter by company-netted direction (Long/Short). This is a derived filter — applied after company netting, not on raw positions."
+          }
+        },
+        "type": "object",
+        "title": "CommonFilters",
+        "description": "Common filters applicable to most metrics"
+      },
+      "DataResponseMetadata": {
+        "properties": {
+          "date_range": {
+            "$ref": "#/components/schemas/DateRangeResponse",
+            "description": "Date range for the query (with resolved dates)"
+          },
+          "filters": {
+            "anyOf": [
+              {
+                "additionalProperties": true,
+                "type": "object"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Filters",
+            "description": "Filters applied to the query"
+          },
+          "group_by": {
+            "anyOf": [
+              {
+                "items": {
+                  "type": "string"
+                },
+                "type": "array"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Group By",
+            "description": "Grouping dimensions used"
+          },
+          "sort": {
+            "anyOf": [
+              {
+                "additionalProperties": true,
+                "type": "object"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Sort",
+            "description": "Sort configuration used"
+          },
+          "record_count": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Record Count",
+            "description": "Number of records returned"
+          },
+          "display_columns": {
+            "anyOf": [
+              {
+                "items": {
+                  "type": "string"
+                },
+                "type": "array"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Display Columns",
+            "description": "Columns to display in the UI (metrics + group_by dimensions)"
+          },
+          "selectable_display_columns": {
+            "anyOf": [
+              {
+                "items": {
+                  "type": "string"
+                },
+                "type": "array"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Selectable Display Columns",
+            "description": "Columns the UI can offer as a toggle/dropdown. First item is the default selection. None when not applicable."
+          },
+          "display_name_map": {
+            "additionalProperties": {
+              "type": "string"
+            },
+            "type": "object",
+            "title": "Display Name Map",
+            "description": "Map of column name -> human-readable display name for every column the response may surface (display + hidden + selectable + group_by + filters + sort). Frontend uses this to render headers without /catalog. Computed at serialization so post-construction mutations of display_columns/group_by are reflected.",
+            "readOnly": true
+          }
+        },
+        "type": "object",
+        "required": [
+          "date_range",
+          "display_name_map"
+        ],
+        "title": "DataResponseMetadata",
+        "description": "Metadata included in data responses (excludes config that's in /config endpoint)"
+      },
+      "DateRangeRequest": {
+        "properties": {
+          "start_date": {
+            "anyOf": [
+              {
+                "type": "string",
+                "format": "date"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Start Date",
+            "description": "Start date for the metrics calculation (inclusive). Required if period is not provided.",
+            "openapi_examples": {
+              "jan_2025": {
+                "description": "Start of year 2025",
+                "summary": "January 1, 2025",
+                "value": "2025-01-01"
+              }
+            }
+          },
+          "end_date": {
+            "anyOf": [
+              {
+                "type": "string",
+                "format": "date"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "End Date",
+            "description": "End date for the metrics calculation (inclusive). Defaults to today's date in EST if not provided.",
+            "openapi_examples": {
+              "dec_2025": {
+                "description": "End of year 2025",
+                "summary": "December 31, 2025",
+                "value": "2025-12-31"
+              }
+            }
+          },
+          "period": {
+            "anyOf": [
+              {
+                "type": "string",
+                "enum": [
+                  "YTD",
+                  "QTD",
+                  "MTD",
+                  "WTD",
+                  "DTD",
+                  "ITD"
+                ]
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Period",
+            "description": "Period shorthand for date range. Cannot be used with start_date/end_date. Options: YTD (Year to Date), QTD (Quarter to Date), MTD (Month to Date), WTD (Week to Date), DTD (Day to Date), ITD (Inception to Date)",
+            "openapi_examples": {
+              "dtd": {
+                "description": "Today only",
+                "summary": "Day to Date",
+                "value": "DTD"
+              },
+              "itd": {
+                "description": "From inception date (2021-01-01) to today",
+                "summary": "Inception to Date",
+                "value": "ITD"
+              },
+              "mtd": {
+                "description": "From 1st of current month to today",
+                "summary": "Month to Date",
+                "value": "MTD"
+              },
+              "qtd": {
+                "description": "From start of current quarter to today",
+                "summary": "Quarter to Date",
+                "value": "QTD"
+              },
+              "wtd": {
+                "description": "From Monday of current week to today",
+                "summary": "Week to Date",
+                "value": "WTD"
+              },
+              "ytd": {
+                "description": "From January 1st of current year to today",
+                "summary": "Year to Date",
+                "value": "YTD"
+              }
+            }
+          }
+        },
+        "type": "object",
+        "title": "DateRangeRequest",
+        "description": "Date range specification for metrics queries.\n\nSupports two modes:\n1. Explicit dates: Provide start_date (required) and optionally end_date\n2. Period shorthand: Provide period (YTD, QTD, MTD, WTD, DTD)\n\nOnly one mode can be used at a time. If neither is provided, defaults to YTD.\nAll date calculations use EST timezone (America/New_York).\n\nMode-exclusivity validation is inherited from ``BaseDateRangeRequest``;\nfields below are re-declared only to attach OpenAPI examples."
+      },
+      "DateRangeResponse": {
+        "properties": {
+          "start_date": {
+            "type": "string",
+            "format": "date",
+            "title": "Start Date",
+            "description": "Resolved start date (inclusive)"
+          },
+          "end_date": {
+            "type": "string",
+            "format": "date",
+            "title": "End Date",
+            "description": "Resolved end date (inclusive)"
+          },
+          "period": {
+            "anyOf": [
+              {
+                "type": "string",
+                "enum": [
+                  "YTD",
+                  "QTD",
+                  "MTD",
+                  "WTD",
+                  "DTD",
+                  "ITD"
+                ]
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Period",
+            "description": "Period shorthand that was requested (if any)"
+          }
+        },
+        "type": "object",
+        "required": [
+          "start_date",
+          "end_date"
+        ],
+        "title": "DateRangeResponse",
+        "description": "Date range for response metadata with resolved dates.\n\nUnlike DateRangeRequest, this model allows all three fields to be present\nsince it shows both what was requested (period) and what was resolved (dates).\nResolved ``start_date``/``end_date`` are inherited from\n``BaseDateRangeResponse``."
+      },
+      "FilterCatalogItem": {
+        "properties": {
+          "name": {
+            "type": "string",
+            "title": "Name",
+            "description": "Metric identifier"
+          },
+          "description": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Description",
+            "description": "Description of the metric"
+          },
+          "display_name": {
+            "type": "string",
+            "title": "Display Name",
+            "description": "Human-readable display name"
+          },
+          "display_type": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/MetricDisplayType"
+              },
+              {
+                "type": "string"
+              }
+            ],
+            "title": "Display Type",
+            "description": "Display type for formatting"
+          },
+          "values": {
+            "anyOf": [
+              {
+                "items": {},
+                "type": "array"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Values",
+            "description": "Available filter values (only populated when include_filterable_values=True)"
+          }
+        },
+        "type": "object",
+        "required": [
+          "name",
+          "description",
+          "display_name",
+          "display_type"
+        ],
+        "title": "FilterCatalogItem",
+        "description": "Metadata for a single filter"
+      },
+      "FundBreakdownConfigResponse": {
+        "properties": {
+          "metadata": {
+            "$ref": "#/components/schemas/BaseCardConfigMetadata",
+            "description": "Configuration metadata for fund breakdown"
+          }
+        },
+        "type": "object",
+        "required": [
+          "metadata"
+        ],
+        "title": "FundBreakdownConfigResponse",
+        "description": "Response for Fund Breakdown configuration endpoint."
+      },
+      "FundBreakdownRequest": {
+        "properties": {
+          "date_range": {
+            "$ref": "#/components/schemas/DateRangeRequest",
+            "description": "Date range for the metrics calculation. Defaults to YTD (January 1st of current year to today in UTC)"
+          },
+          "filters": {
+            "$ref": "#/components/schemas/CommonFilters",
+            "description": "Optional filters to apply"
+          }
+        },
+        "type": "object",
+        "title": "FundBreakdownRequest",
+        "description": "Request model for Fund Breakdown metrics\n\nThis endpoint provides a consolidated view for the Fund Breakdown card.\nReturns [summary_response, detail_response]:\n- summary_response: 7 rows (one per section), no grouping\n- detail_response: all detail rows across 7 sections, grouped by dimension\n\nSections: Gross Long, Illiquid Privates, Gross Short, Net Exposure,\nGross Exposure, Total Long, Minnows."
+      },
+      "FundBreakdownResponse": {
+        "properties": {
+          "metadata": {
+            "$ref": "#/components/schemas/DataResponseMetadata",
+            "description": "Query metadata (date range, filters applied, etc.)"
+          },
+          "data": {
+            "items": {
+              "$ref": "#/components/schemas/FundBreakdownStats"
+            },
+            "type": "array",
+            "title": "Data",
+            "description": "List of fund breakdown statistics"
+          }
+        },
+        "type": "object",
+        "required": [
+          "metadata",
+          "data"
+        ],
+        "title": "FundBreakdownResponse",
+        "description": "Response model for Fund Breakdown metrics"
+      },
+      "FundBreakdownStats": {
+        "properties": {
+          "name": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Name",
+            "description": "Section label (e.g., 'Gross Long', 'Gross Exposure')"
+          },
+          "exposure_percent": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Exposure Percent",
+            "description": "Exposure as a percentage of NAV at the latest date. Source metric varies by section (net_exposure or company_netted_gmv)."
+          },
+          "grouped_metric_value": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Grouped Metric Value",
+            "description": "Value of the grouping dimension (company_security_code_portfolio_asset_class or instrument_security_code depending on section)"
+          }
+        },
+        "type": "object",
+        "title": "FundBreakdownStats",
+        "description": "Statistics for a single Fund Breakdown row."
+      },
+      "FundCombination": {
+        "properties": {
+          "fund_1": {
+            "type": "string",
+            "title": "Fund 1",
+            "description": "First fund name"
+          },
+          "fund_2": {
+            "type": "string",
+            "title": "Fund 2",
+            "description": "Second fund name"
+          }
+        },
+        "type": "object",
+        "required": [
+          "fund_1",
+          "fund_2"
+        ],
+        "title": "FundCombination",
+        "description": "A fund comparison pair."
+      },
+      "FundSummaryConfigResponse": {
+        "properties": {
+          "metadata": {
+            "$ref": "#/components/schemas/CardConfigMetadata",
+            "description": "Configuration metadata for fund summary"
+          }
+        },
+        "type": "object",
+        "required": [
+          "metadata"
+        ],
+        "title": "FundSummaryConfigResponse",
+        "description": "Response for Fund Summary configuration endpoint."
+      },
+      "FundSummaryRequest": {
+        "properties": {
+          "date_range": {
+            "$ref": "#/components/schemas/DateRangeRequest",
+            "description": "Date range for the metrics calculation. Defaults to YTD (January 1st of current year to today in UTC)"
+          },
+          "filters": {
+            "$ref": "#/components/schemas/CommonFilters",
+            "description": "Optional filters to apply"
+          }
+        },
+        "type": "object",
+        "title": "FundSummaryRequest",
+        "description": "Request model for Fund Summary metrics.\n\nThis endpoint returns high-level fund statistics without grouping."
+      },
+      "FundSummaryResponse": {
+        "properties": {
+          "metadata": {
+            "$ref": "#/components/schemas/DataResponseMetadata",
+            "description": "Query metadata (date range, filters applied, etc.)"
+          },
+          "data": {
+            "items": {
+              "$ref": "#/components/schemas/FundSummaryStats"
+            },
+            "type": "array",
+            "title": "Data",
+            "description": "Fund summary metrics as name/value pairs (NAV, PnL %, Long PnL %, Short PnL %)"
+          }
+        },
+        "type": "object",
+        "required": [
+          "metadata",
+          "data"
+        ],
+        "title": "FundSummaryResponse",
+        "description": "Response model for Fund Summary endpoint."
+      },
+      "FundSummaryStats": {
+        "properties": {
+          "name": {
+            "type": "string",
+            "title": "Name",
+            "description": "Metric display name"
+          },
+          "value": {
+            "type": "number",
+            "title": "Value",
+            "description": "Metric value"
+          }
+        },
+        "type": "object",
+        "required": [
+          "name",
+          "value"
+        ],
+        "title": "FundSummaryStats",
+        "description": "Stats model for Fund Summary metrics - name/value pair format."
+      },
+      "GroupByConfig": {
+        "properties": {
+          "selectable_dimensions": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Selectable Dimensions",
+            "description": "Dimensions available in dropdown selector",
+            "default": []
+          },
+          "required_dimensions": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Required Dimensions",
+            "description": "Dimensions that must always be included in group_by",
+            "default": []
+          }
+        },
+        "type": "object",
+        "title": "GroupByConfig",
+        "description": "Configuration for group_by options available for an endpoint"
+      },
+      "HTTPValidationError": {
+        "properties": {
+          "detail": {
+            "items": {
+              "$ref": "#/components/schemas/ValidationError"
+            },
+            "type": "array",
+            "title": "Detail"
+          }
+        },
+        "type": "object",
+        "title": "HTTPValidationError"
+      },
+      "KgExposureConfigResponse": {
+        "properties": {
+          "metadata": {
+            "$ref": "#/components/schemas/CardConfigMetadata",
+            "description": "Configuration metadata for the KG exposure card"
+          }
+        },
+        "type": "object",
+        "required": [
+          "metadata"
+        ],
+        "title": "KgExposureConfigResponse",
+        "description": "Response for the KG exposure configuration endpoint."
+      },
+      "KgExposureRequest": {
+        "properties": {
+          "date_range": {
+            "$ref": "#/components/schemas/DateRangeRequest",
+            "description": "Date range for the metrics calculation. Defaults to YTD (January 1st of current year to today in UTC)"
+          },
+          "filters": {
+            "$ref": "#/components/schemas/CommonFilters",
+            "description": "Optional filters to apply"
+          },
+          "dimension": {
+            "type": "string",
+            "enum": [
+              "ta",
+              "modality",
+              "stage",
+              "geography"
+            ],
+            "title": "Dimension",
+            "description": "KG decomposition dimension to break exposure down by"
+          }
+        },
+        "type": "object",
+        "required": [
+          "dimension"
+        ],
+        "title": "KgExposureRequest",
+        "description": "Request for the KG exposure breakdown. Inherits date_range + filters."
+      },
+      "KgExposureResponse": {
+        "properties": {
+          "metadata": {
+            "$ref": "#/components/schemas/DataResponseMetadata",
+            "description": "Query metadata (date range, filters applied, etc.)"
+          },
+          "data": {
+            "items": {
+              "$ref": "#/components/schemas/KgExposureRow"
+            },
+            "type": "array",
+            "title": "Data",
+            "description": "Per-tag rows, sorted by company_netted_gmv_percent_nav descending"
+          }
+        },
+        "type": "object",
+        "required": [
+          "metadata",
+          "data"
+        ],
+        "title": "KgExposureResponse",
+        "description": "Response for the KG exposure endpoint (house-style data + metadata)."
+      },
+      "KgExposureRow": {
+        "properties": {
+          "company_netted_gmv": {
+            "type": "number",
+            "title": "Company Netted Gmv",
+            "description": "Tag's company-netted GMV at the as-of date (USD)"
+          },
+          "company_netted_gmv_percent_nav": {
+            "type": "number",
+            "title": "Company Netted Gmv Percent Nav",
+            "description": "Tag's company-netted GMV as a percent of NAV (consistent with Market Cap Distribution & Liquidity Summary)"
+          },
+          "daily_pnl_usd": {
+            "type": "number",
+            "title": "Daily Pnl Usd",
+            "description": "Tag's daily PnL on the as-of date (USD), weight-scaled"
+          },
+          "daily_pnl_percent_nav": {
+            "type": "number",
+            "title": "Daily Pnl Percent Nav",
+            "description": "Tag's daily PnL as a percent of prior-day NAV"
+          },
+          "cumulative_pnl_percent_nav": {
+            "type": "number",
+            "title": "Cumulative Pnl Percent Nav",
+            "description": "Tag's cumulative PnL % NAV, chain-linked from period start"
+          }
+        },
+        "additionalProperties": true,
+        "type": "object",
+        "required": [
+          "company_netted_gmv",
+          "company_netted_gmv_percent_nav",
+          "daily_pnl_usd",
+          "daily_pnl_percent_nav",
+          "cumulative_pnl_percent_nav"
+        ],
+        "title": "KgExposureRow",
+        "description": "One drug-program tag's exposure + PnL (PRD Appendix D).\n\nThe tag label is carried under a key named after the selected dimension\n(e.g. ``ta`` / ``modality`` / ``stage`` / ``geography``) so the column\nheader resolves via ``display_name_map`` exactly like every other card's\ngroup column — hence ``extra=\"allow\"``."
+      },
+      "LiquiditySummaryConfigResponse": {
+        "properties": {
+          "metadata": {
+            "$ref": "#/components/schemas/BaseCardConfigMetadata",
+            "description": "Configuration metadata for liquidity summary"
+          }
+        },
+        "type": "object",
+        "required": [
+          "metadata"
+        ],
+        "title": "LiquiditySummaryConfigResponse",
+        "description": "Response for Liquidity Summary configuration endpoint."
+      },
+      "LiquiditySummaryRequest": {
+        "properties": {
+          "date_range": {
+            "$ref": "#/components/schemas/DateRangeRequest",
+            "description": "Date range for the metrics calculation. Defaults to YTD (January 1st of current year to today in UTC)"
+          },
+          "filters": {
+            "$ref": "#/components/schemas/CommonFilters",
+            "description": "Optional filters to apply"
+          },
+          "sort": {
+            "$ref": "#/components/schemas/BaseSortConfig",
+            "description": "Sort configuration for results. Defaults to days_to_cover_binned ascending."
+          }
+        },
+        "type": "object",
+        "title": "LiquiditySummaryRequest",
+        "description": "Request model for Liquidity Summary metrics\n\nThis endpoint provides company-netted GMV percent NAV distribution statistics.\nReturns two datasets in a single response:\n1. Grouped by days_to_cover_binned only (summary)\n2. Grouped by days_to_cover_binned and company_security_code_portfolio_asset_class (detail)"
+      },
+      "LiquiditySummaryResponse": {
+        "properties": {
+          "metadata": {
+            "$ref": "#/components/schemas/DataResponseMetadata",
+            "description": "Query metadata (date range, filters applied, etc.)"
+          },
+          "data": {
+            "items": {
+              "$ref": "#/components/schemas/LiquiditySummaryStats"
+            },
+            "type": "array",
+            "title": "Data",
+            "description": "List of liquidity summary statistics"
+          }
+        },
+        "type": "object",
+        "required": [
+          "metadata",
+          "data"
+        ],
+        "title": "LiquiditySummaryResponse",
+        "description": "Response model for Liquidity Summary metrics"
+      },
+      "LiquiditySummaryStats": {
+        "properties": {
+          "days_to_cover_binned": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Days To Cover Binned",
+            "description": "Days to cover bucket (N/A, 0-5, 6-20, 21-40, 41-60, 61+)"
+          },
+          "company_security_code_portfolio_asset_class": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Company Security Code Demo Asset Class",
+            "description": "Company security code Demo asset class (present when grouped by company_security_code_portfolio_asset_class)"
+          },
+          "company_netted_gmv_percent_nav": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Company Netted Gmv Percent Nav",
+            "description": "Company-netted GMV as a percentage of NAV at the latest date"
+          }
+        },
+        "type": "object",
+        "title": "LiquiditySummaryStats",
+        "description": "Statistics for Liquidity Summary"
+      },
+      "LoginRequest": {
+        "properties": {
+          "email": {
+            "type": "string",
+            "title": "Email"
+          },
+          "password": {
+            "type": "string",
+            "title": "Password"
+          }
+        },
+        "type": "object",
+        "required": [
+          "email",
+          "password"
+        ],
+        "title": "LoginRequest"
+      },
+      "MarketCapDistributionConfigResponse": {
+        "properties": {
+          "metadata": {
+            "$ref": "#/components/schemas/BaseCardConfigMetadata",
+            "description": "Configuration metadata for market cap distribution"
+          }
+        },
+        "type": "object",
+        "required": [
+          "metadata"
+        ],
+        "title": "MarketCapDistributionConfigResponse",
+        "description": "Response for Market Cap Distribution configuration endpoint."
+      },
+      "MarketCapDistributionRequest": {
+        "properties": {
+          "date_range": {
+            "$ref": "#/components/schemas/DateRangeRequest",
+            "description": "Date range for the metrics calculation. Defaults to YTD (January 1st of current year to today in UTC)"
+          },
+          "filters": {
+            "$ref": "#/components/schemas/CommonFilters",
+            "description": "Optional filters to apply"
+          }
+        },
+        "type": "object",
+        "title": "MarketCapDistributionRequest",
+        "description": "Request model for Market Cap Distribution metrics\n\nThis endpoint provides company-netted GMV percent NAV distribution statistics.\nReturns two datasets in a single response:\n1. Grouped by company_netted_direction only (summary)\n2. Grouped by company_netted_direction and market_cap (detail)\n\nCompany netting: net exposure is summed by (issuer_id, illiquid_private)\nto produce a company-level netted exposure, then ABS() is taken to compute GMV."
+      },
+      "MarketCapDistributionResponse": {
+        "properties": {
+          "metadata": {
+            "$ref": "#/components/schemas/DataResponseMetadata",
+            "description": "Query metadata (date range, filters applied, etc.)"
+          },
+          "data": {
+            "items": {
+              "$ref": "#/components/schemas/MarketCapDistributionStats"
+            },
+            "type": "array",
+            "title": "Data",
+            "description": "List of market cap distribution statistics"
+          }
+        },
+        "type": "object",
+        "required": [
+          "metadata",
+          "data"
+        ],
+        "title": "MarketCapDistributionResponse",
+        "description": "Response model for Market Cap Distribution metrics"
+      },
+      "MarketCapDistributionStats": {
+        "properties": {
+          "company_netted_direction": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Company Netted Direction",
+            "description": "Company-netted direction - Long/Short"
+          },
+          "market_cap": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Market Cap",
+            "description": "Market cap bucket: S (<1B), M (1B-5B), L (>5B)"
+          },
+          "company_netted_gmv_percent_nav": {
+            "type": "number",
+            "title": "Company Netted Gmv Percent Nav",
+            "description": "Company-netted GMV as a percentage of NAV at the latest date"
+          }
+        },
+        "type": "object",
+        "required": [
+          "company_netted_gmv_percent_nav"
+        ],
+        "title": "MarketCapDistributionStats",
+        "description": "Statistics for Market Cap Distribution"
+      },
+      "MetricDisplayType": {
+        "type": "string",
+        "enum": [
+          "string",
+          "percent",
+          "percent_no_decimals",
+          "pnl",
+          "dollars",
+          "integer",
+          "float",
+          "date",
+          "ratio"
+        ],
+        "title": "MetricDisplayType"
+      },
+      "PerformanceOverviewConfigResponse": {
+        "properties": {
+          "metadata": {
+            "$ref": "#/components/schemas/CardConfigMetadata",
+            "description": "Configuration metadata for performance overview"
+          },
+          "benchmark_id": {
+            "type": "string",
+            "title": "Benchmark Id",
+            "description": "Default benchmark ID for alpha calculations"
+          },
+          "benchmarks": {
+            "additionalProperties": {
+              "type": "string"
+            },
+            "type": "object",
+            "title": "Benchmarks",
+            "description": "Available benchmarks (benchmark_id -> display_name)"
+          }
+        },
+        "type": "object",
+        "required": [
+          "metadata",
+          "benchmark_id",
+          "benchmarks"
+        ],
+        "title": "PerformanceOverviewConfigResponse",
+        "description": "Response for Performance Overview configuration endpoint"
+      },
+      "PerformanceOverviewDataMetadata": {
+        "properties": {
+          "date_range": {
+            "$ref": "#/components/schemas/DateRangeResponse",
+            "description": "Date range for the query (with resolved dates)"
+          },
+          "filters": {
+            "anyOf": [
+              {
+                "additionalProperties": true,
+                "type": "object"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Filters",
+            "description": "Filters applied to the query"
+          },
+          "group_by": {
+            "anyOf": [
+              {
+                "items": {
+                  "type": "string"
+                },
+                "type": "array"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Group By",
+            "description": "Grouping dimensions used"
+          },
+          "sort": {
+            "anyOf": [
+              {
+                "additionalProperties": true,
+                "type": "object"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Sort",
+            "description": "Sort configuration used"
+          },
+          "record_count": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Record Count",
+            "description": "Number of records returned"
+          },
+          "display_columns": {
+            "anyOf": [
+              {
+                "items": {
+                  "type": "string"
+                },
+                "type": "array"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Display Columns",
+            "description": "Columns to display in the UI (metrics + group_by dimensions)"
+          },
+          "selectable_display_columns": {
+            "anyOf": [
+              {
+                "items": {
+                  "type": "string"
+                },
+                "type": "array"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Selectable Display Columns",
+            "description": "Columns the UI can offer as a toggle/dropdown. First item is the default selection. None when not applicable."
+          },
+          "selectable_display_dimensions": {
+            "anyOf": [
+              {
+                "items": {
+                  "type": "string"
+                },
+                "type": "array"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Selectable Display Dimensions",
+            "description": "Metrics the UI can offer as a toggle/dropdown."
+          },
+          "selected_display_dimension": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Selected Display Dimension",
+            "description": "The metric currently selected/used for the response data."
+          },
+          "display_name_map": {
+            "additionalProperties": {
+              "type": "string"
+            },
+            "type": "object",
+            "title": "Display Name Map",
+            "description": "Map of column name -> human-readable display name for every column the response may surface (display + hidden + selectable + group_by + filters + sort). Frontend uses this to render headers without /catalog. Computed at serialization so post-construction mutations of display_columns/group_by are reflected.",
+            "readOnly": true
+          }
+        },
+        "type": "object",
+        "required": [
+          "date_range",
+          "display_name_map"
+        ],
+        "title": "PerformanceOverviewDataMetadata",
+        "description": "Extended metadata for performance overview with selectable metric dimensions.\n\nAdds selectable/selected display dimension fields so the UI can\noffer a metric toggle (PnL%, Simple Alpha, Net Adjusted Alpha)."
+      },
+      "PerformanceOverviewRequest": {
+        "properties": {
+          "date_range": {
+            "$ref": "#/components/schemas/DateRangeRequest",
+            "description": "Date range for the metrics calculation. Defaults to YTD (January 1st of current year to today in UTC)"
+          },
+          "filters": {
+            "$ref": "#/components/schemas/CommonFilters",
+            "description": "Optional filters to apply"
+          },
+          "group_by": {
+            "items": {
+              "type": "string",
+              "enum": [
+                "date",
+                "direction",
+                "fund_name",
+                "company_subsector",
+                "instrument_portfolio_asset_class",
+                "illiquid_private"
+              ]
+            },
+            "type": "array",
+            "title": "Group By",
+            "description": "Must include 'date' and one dimension. Avatar columns are automatically included when grouping by analyst.",
+            "default": [
+              "date",
+              "direction"
+            ],
+            "openapi_examples": {
+              "by_direction": {
+                "description": "Group results by long/short direction and date",
+                "summary": "Group by direction and date",
+                "value": [
+                  "date",
+                  "direction"
+                ]
+              },
+              "by_fund": {
+                "description": "Group results by fund name and date",
+                "summary": "Group by fund and date",
+                "value": [
+                  "date",
+                  "fund_name"
+                ]
+              }
+            }
+          },
+          "metric": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Metric",
+            "description": "Metric to display. Options: 'cumulative_pnl_percent_nav' (default), 'cumulative_simple_alpha_pnl_percent_nav', 'cumulative_net_adjusted_alpha_pnl_percent_nav'. Alpha metrics require benchmark_id."
+          },
+          "benchmark_id": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Benchmark Id",
+            "description": "Bloomberg ID of the benchmark for alpha calculations. Only used when metric is an alpha metric. If omitted, defaults to PERFORMANCE_OVERVIEW_DEFAULT_BENCHMARK_ID on the server side.",
+            "openapi_examples": {
+              "spx": {
+                "description": "S&P 500 Index",
+                "summary": "SPX Index",
+                "value": "SPX Index"
+              },
+              "xbi": {
+                "description": "SPDR S&P Biotech ETF",
+                "summary": "XBI US Equity",
+                "value": "XBI US Equity"
+              }
+            }
+          },
+          "sort": {
+            "$ref": "#/components/schemas/PerformanceOverviewSortConfig",
+            "description": "Sort configuration for results"
+          }
+        },
+        "type": "object",
+        "title": "PerformanceOverviewRequest",
+        "description": "Request model for Performance Overview metrics\n\nThis endpoint groups by date and one additional dimension to provide\ntime-series cumulative PnL or alpha data.\n\nSupported metrics:\n- cumulative_pnl_percent_nav (default): Geometric cumulative PnL as % of NAV\n- cumulative_simple_alpha_pnl_percent_nav: PnL% minus benchmark cumulative return\n- cumulative_net_adjusted_alpha_pnl_percent_nav: PnL% minus (benchmark% × avg net exposure%)"
+      },
+      "PerformanceOverviewResponse": {
+        "properties": {
+          "metadata": {
+            "$ref": "#/components/schemas/PerformanceOverviewDataMetadata",
+            "description": "Response metadata with selectable metric dimensions"
+          },
+          "data": {
+            "items": {
+              "$ref": "#/components/schemas/PerformanceOverviewStats"
+            },
+            "type": "array",
+            "title": "Data",
+            "description": "List of performance statistics by date and dimension"
+          }
+        },
+        "type": "object",
+        "required": [
+          "metadata",
+          "data"
+        ],
+        "title": "PerformanceOverviewResponse",
+        "description": "Response model for Performance Overview metrics data"
+      },
+      "PerformanceOverviewSortConfig": {
+        "properties": {
+          "sort_by": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Sort By",
+            "description": "Columns to sort by (date, cumulative_pnl_percent_nav, or any group_by dimension)",
+            "default": [
+              "date"
+            ]
+          },
+          "sort_descending": {
+            "type": "boolean",
+            "title": "Sort Descending",
+            "description": "Sort in descending order",
+            "default": false
+          }
+        },
+        "type": "object",
+        "title": "PerformanceOverviewSortConfig",
+        "description": "Sort configuration for performance overview."
+      },
+      "PerformanceOverviewStats": {
+        "properties": {
+          "date": {
+            "type": "string",
+            "title": "Date",
+            "description": "Date in YYYY-MM-DD format (ISO-8601)"
+          },
+          "direction": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Direction",
+            "description": "Net Direction of the total position (long or short) accounting for all held positions (Stock, Options, Swap, etc)"
+          },
+          "fund_name": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Fund Name",
+            "description": "Name of the Demo Fund"
+          },
+          "company_subsector": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Company Subsector",
+            "description": "Demo Subsector assigned to the company"
+          },
+          "instrument_portfolio_asset_class": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Instrument Demo Asset Class",
+            "description": "Demo Asset class of the instrument"
+          },
+          "illiquid_private": {
+            "anyOf": [
+              {
+                "type": "boolean"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Illiquid Private",
+            "description": "Boolean flag indicating if position is classified as illiquid private (Private=Private AND ((Private Type=DI AND Lock Up Status=Blank) OR Private Type=Other))"
+          },
+          "cumulative_pnl_percent_nav": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Cumulative Pnl Percent Nav",
+            "description": "PnL for the period (as a percentage of NAV)"
+          },
+          "cumulative_simple_alpha_pnl_percent_nav": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Cumulative Simple Alpha Pnl Percent Nav",
+            "description": "Simple Alpha PnL for the period - Fund alpha performance computed as the direct difference between period's PnL (% NAV) and benchmark's total return for that period: [Demo PnL % NAV] - [Benchmark Rtn]"
+          },
+          "cumulative_net_adjusted_alpha_pnl_percent_nav": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Cumulative Net Adjusted Alpha Pnl Percent Nav",
+            "description": "Net Adjusted Alpha PnL for the period - Fund alpha performance computed as the direct difference between period's PnL (% NAV) and benchmark's total return adjusted for average net market value for that period: [Demo PnL % NAV] - ([Benchmark Rtn] * [Average NMV % NAV])"
+          }
+        },
+        "type": "object",
+        "required": [
+          "date"
+        ],
+        "title": "PerformanceOverviewStats",
+        "description": "Statistics for Performance Overview"
+      },
+      "PortfolioMetricCatalogItem": {
+        "properties": {
+          "name": {
+            "type": "string",
+            "title": "Name",
+            "description": "Metric identifier"
+          },
+          "description": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Description",
+            "description": "Description of the metric"
+          },
+          "display_name": {
+            "type": "string",
+            "title": "Display Name",
+            "description": "Human-readable display name"
+          },
+          "display_type": {
+            "anyOf": [
+              {
+                "$ref": "#/components/schemas/MetricDisplayType"
+              },
+              {
+                "type": "string"
+              }
+            ],
+            "title": "Display Type",
+            "description": "Display type for formatting"
+          }
+        },
+        "type": "object",
+        "required": [
+          "name",
+          "description",
+          "display_name",
+          "display_type"
+        ],
+        "title": "PortfolioMetricCatalogItem",
+        "description": "Metadata for a single metric"
+      },
+      "PositionDifferencesConfigMetadata": {
+        "properties": {
+          "supported_filters": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Supported Filters",
+            "description": "List of supported filter fields for this endpoint"
+          },
+          "date_range": {
+            "$ref": "#/components/schemas/DateRangeRequest",
+            "description": "Default date range for this endpoint"
+          },
+          "group_by_config": {
+            "$ref": "#/components/schemas/GroupByConfig",
+            "description": "Available group_by options for this endpoint"
+          },
+          "group_config_default": {
+            "$ref": "#/components/schemas/GroupByConfig",
+            "description": "Default group_by selections for this endpoint"
+          },
+          "fund_combinations": {
+            "items": {
+              "$ref": "#/components/schemas/FundCombination"
+            },
+            "type": "array",
+            "title": "Fund Combinations",
+            "description": "Available fund comparison pairs"
+          },
+          "display_name_map": {
+            "additionalProperties": {
+              "type": "string"
+            },
+            "type": "object",
+            "title": "Display Name Map",
+            "description": "Map of column name -> human-readable display name for every metric, dimension, and filter referenced by this card. Allows the frontend to render headers without calling /catalog. Computed from allowlisted list[str] fields at serialization time.",
+            "readOnly": true
+          }
+        },
+        "type": "object",
+        "required": [
+          "supported_filters",
+          "group_by_config",
+          "group_config_default",
+          "fund_combinations",
+          "display_name_map"
+        ],
+        "title": "PositionDifferencesConfigMetadata",
+        "description": "Configuration metadata for Position Differences with fund combinations."
+      },
+      "PositionDifferencesConfigResponse": {
+        "properties": {
+          "metadata": {
+            "$ref": "#/components/schemas/PositionDifferencesConfigMetadata",
+            "description": "Configuration metadata for position differences"
+          }
+        },
+        "type": "object",
+        "required": [
+          "metadata"
+        ],
+        "title": "PositionDifferencesConfigResponse",
+        "description": "Response for Position Differences configuration endpoint."
+      },
+      "PositionDifferencesRequest": {
+        "properties": {
+          "date_range": {
+            "$ref": "#/components/schemas/DateRangeRequest",
+            "description": "Date range for the metrics calculation. Defaults to YTD (January 1st of current year to today in UTC)"
+          },
+          "filters": {
+            "$ref": "#/components/schemas/CommonFilters",
+            "description": "Optional filters to apply"
+          },
+          "fund_1": {
+            "type": "string",
+            "title": "Fund 1",
+            "description": "First fund name for comparison (maps to fund_1 column)"
+          },
+          "fund_2": {
+            "type": "string",
+            "title": "Fund 2",
+            "description": "Second fund name for comparison (maps to fund_2 column)"
+          }
+        },
+        "type": "object",
+        "required": [
+          "fund_1",
+          "fund_2"
+        ],
+        "title": "PositionDifferencesRequest",
+        "description": "Request model for Position Differences metrics.\n\nThis endpoint compares net_exposure_percent between two funds,\ngrouped by company_security_code_portfolio_asset_class."
+      },
+      "PositionDifferencesResponse": {
+        "properties": {
+          "metadata": {
+            "$ref": "#/components/schemas/PositionDifferencesResponseMetadata",
+            "description": "Query metadata including fund name mappings"
+          },
+          "data": {
+            "items": {
+              "$ref": "#/components/schemas/PositionDifferencesStats"
+            },
+            "type": "array",
+            "title": "Data",
+            "description": "List of position differences statistics by company security code Demo asset class"
+          }
+        },
+        "type": "object",
+        "required": [
+          "metadata",
+          "data"
+        ],
+        "title": "PositionDifferencesResponse",
+        "description": "Response model for Position Differences metrics."
+      },
+      "PositionDifferencesResponseMetadata": {
+        "properties": {
+          "date_range": {
+            "$ref": "#/components/schemas/DateRangeResponse",
+            "description": "Date range for the query (with resolved dates)"
+          },
+          "filters": {
+            "anyOf": [
+              {
+                "additionalProperties": true,
+                "type": "object"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Filters",
+            "description": "Filters applied to the query"
+          },
+          "group_by": {
+            "anyOf": [
+              {
+                "items": {
+                  "type": "string"
+                },
+                "type": "array"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Group By",
+            "description": "Grouping dimensions used"
+          },
+          "sort": {
+            "anyOf": [
+              {
+                "additionalProperties": true,
+                "type": "object"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Sort",
+            "description": "Sort configuration used"
+          },
+          "record_count": {
+            "anyOf": [
+              {
+                "type": "integer"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Record Count",
+            "description": "Number of records returned"
+          },
+          "display_columns": {
+            "anyOf": [
+              {
+                "items": {
+                  "type": "string"
+                },
+                "type": "array"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Display Columns",
+            "description": "Columns to display in the UI (metrics + group_by dimensions)"
+          },
+          "selectable_display_columns": {
+            "anyOf": [
+              {
+                "items": {
+                  "type": "string"
+                },
+                "type": "array"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Selectable Display Columns",
+            "description": "Columns the UI can offer as a toggle/dropdown. First item is the default selection. None when not applicable."
+          },
+          "fund_1": {
+            "type": "string",
+            "title": "Fund 1",
+            "description": "Fund name for fund_1_exposure column"
+          },
+          "fund_2": {
+            "type": "string",
+            "title": "Fund 2",
+            "description": "Fund name for fund_2_exposure column"
+          },
+          "display_name_map": {
+            "additionalProperties": {
+              "type": "string"
+            },
+            "type": "object",
+            "title": "Display Name Map",
+            "description": "Map of column name -> human-readable display name for every column the response may surface (display + hidden + selectable + group_by + filters + sort). Frontend uses this to render headers without /catalog. Computed at serialization so post-construction mutations of display_columns/group_by are reflected.",
+            "readOnly": true
+          }
+        },
+        "type": "object",
+        "required": [
+          "date_range",
+          "fund_1",
+          "fund_2",
+          "display_name_map"
+        ],
+        "title": "PositionDifferencesResponseMetadata",
+        "description": "Metadata for Position Differences response with fund name mappings."
+      },
+      "PositionDifferencesStats": {
+        "properties": {
+          "company_security_code_portfolio_asset_class": {
+            "type": "string",
+            "title": "Company Security Code Demo Asset Class",
+            "description": "Company security code combined with Demo asset class"
+          },
+          "fund_1": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Fund 1",
+            "description": "Net exposure percent for fund_1 (see metadata.fund_1 for fund name)"
+          },
+          "fund_2": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Fund 2",
+            "description": "Net exposure percent for fund_2 (see metadata.fund_2 for fund name)"
+          },
+          "difference": {
+            "anyOf": [
+              {
+                "type": "number"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Difference",
+            "description": "Difference in exposure (fund_1 - fund_2)"
+          }
+        },
+        "type": "object",
+        "required": [
+          "company_security_code_portfolio_asset_class"
+        ],
+        "title": "PositionDifferencesStats",
+        "description": "Statistics for Position Differences - comparison between two funds."
+      },
+      "TopWinnersAndLosersAnalystConfigMetadata": {
+        "properties": {
+          "supported_filters": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Supported Filters",
+            "description": "List of supported filter fields for this endpoint"
+          },
+          "date_range": {
+            "$ref": "#/components/schemas/DateRangeRequest",
+            "description": "Default date range for this endpoint"
+          },
+          "group_by_config": {
+            "$ref": "#/components/schemas/GroupByConfig",
+            "description": "Available group_by options for this endpoint"
+          },
+          "group_config_default": {
+            "$ref": "#/components/schemas/GroupByConfig",
+            "description": "Default group_by selections for this endpoint"
+          },
+          "top_n": {
+            "type": "string",
+            "title": "Top N",
+            "description": "Default top_n label"
+          },
+          "supported_top_n": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Supported Top N",
+            "description": "Supported top_n options",
+            "default": [
+              "Top 5",
+              "Top 10",
+              "Top 20",
+              "Show All"
+            ]
+          },
+          "supported_date_ranges": {
+            "items": {
+              "type": "string",
+              "enum": [
+                "YTD",
+                "QTD",
+                "MTD",
+                "WTD",
+                "DTD",
+                "ITD"
+              ]
+            },
+            "type": "array",
+            "title": "Supported Date Ranges",
+            "description": "Supported date range period shortcuts",
+            "default": [
+              "DTD",
+              "WTD",
+              "MTD",
+              "QTD",
+              "YTD",
+              "ITD"
+            ]
+          },
+          "display_name_map": {
+            "additionalProperties": {
+              "type": "string"
+            },
+            "type": "object",
+            "title": "Display Name Map",
+            "description": "Map of column name -> human-readable display name for every metric, dimension, and filter referenced by this card. Allows the frontend to render headers without calling /catalog. Computed from allowlisted list[str] fields at serialization time.",
+            "readOnly": true
+          }
+        },
+        "type": "object",
+        "required": [
+          "supported_filters",
+          "group_by_config",
+          "group_config_default",
+          "top_n",
+          "display_name_map"
+        ],
+        "title": "TopWinnersAndLosersAnalystConfigMetadata",
+        "description": "Configuration metadata specific to Top Winners/Losers Analyst endpoint"
+      },
+      "TopWinnersAndLosersAnalystConfigResponse": {
+        "properties": {
+          "metadata": {
+            "$ref": "#/components/schemas/TopWinnersAndLosersAnalystConfigMetadata",
+            "description": "Configuration metadata for top winners/losers analyst"
+          }
+        },
+        "type": "object",
+        "required": [
+          "metadata"
+        ],
+        "title": "TopWinnersAndLosersAnalystConfigResponse",
+        "description": "Response for top winners/losers analyst configuration endpoint"
+      },
+      "TopWinnersAndLosersAnalystRequest": {
+        "properties": {
+          "date_range": {
+            "$ref": "#/components/schemas/DateRangeRequest",
+            "description": "Date range for the metrics calculation. Defaults to YTD (January 1st of current year to today in UTC)"
+          },
+          "filters": {
+            "$ref": "#/components/schemas/CommonFilters",
+            "description": "Optional filters to apply"
+          },
+          "top_n": {
+            "type": "string",
+            "enum": [
+              "Top 5",
+              "Top 10",
+              "Top 20",
+              "Show All"
+            ],
+            "title": "Top N",
+            "description": "Top N label ('Top 5', 'Top 10', 'Top 20', 'Show All')",
+            "default": "Top 10"
+          },
+          "result_type": {
+            "anyOf": [
+              {
+                "type": "string",
+                "enum": [
+                  "winners",
+                  "losers"
+                ]
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Result Type",
+            "description": "Filter results by type: 'winners' (positive PnL) or 'losers' (negative PnL). If not specified, returns top N by PnL descending."
+          },
+          "group_by": {
+            "anyOf": [
+              {
+                "items": {
+                  "type": "string",
+                  "enum": [
+                    "primary_analyst",
+                    "secondary_analyst",
+                    "company_security_code_portfolio_asset_class",
+                    "instrument_security_code",
+                    "position_instrument_security_code"
+                  ]
+                },
+                "type": "array"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Group By",
+            "description": "Group results by dimensions. Avatar columns are automatically included when grouping by analyst.",
+            "default": [
+              "primary_analyst"
+            ],
+            "openapi_examples": {
+              "primary_analyst": {
+                "description": "Aggregate by primary analyst",
+                "summary": "Group by primary analyst",
+                "value": [
+                  "primary_analyst"
+                ]
+              },
+              "primary_analyst_and_company_security_code_portfolio_asset_class": {
+                "description": "Aggregate by primary analyst and company security code Demo asset class",
+                "summary": "Group by primary analyst and company security code Demo asset class",
+                "value": [
+                  "primary_analyst",
+                  "company_security_code_portfolio_asset_class"
+                ]
+              },
+              "primary_analyst_and_instrument_security_code": {
+                "description": "Aggregate by primary analyst and instrument security code",
+                "summary": "Group by primary analyst and instrument security code",
+                "value": [
+                  "primary_analyst",
+                  "instrument_security_code"
+                ]
+              },
+              "secondary_analyst": {
+                "description": "Aggregate by secondary analyst",
+                "summary": "Group by secondary analyst",
+                "value": [
+                  "secondary_analyst"
+                ]
+              }
+            }
+          },
+          "sort": {
+            "$ref": "#/components/schemas/BaseSortConfig",
+            "description": "Sort configuration for the results"
+          }
+        },
+        "type": "object",
+        "title": "TopWinnersAndLosersAnalystRequest",
+        "description": "Request for top winners and losers statistics by analyst"
+      },
+      "TopWinnersAndLosersAnalystResponse": {
+        "properties": {
+          "metadata": {
+            "$ref": "#/components/schemas/DataResponseMetadata",
+            "description": "Query metadata (date range, filters applied, etc.)"
+          },
+          "data": {
+            "items": {
+              "$ref": "#/components/schemas/TopWinnersAndLosersAnalystStats"
+            },
+            "type": "array",
+            "title": "Data",
+            "description": "List of top winners and losers analyst statistics"
+          }
+        },
+        "type": "object",
+        "required": [
+          "metadata",
+          "data"
+        ],
+        "title": "TopWinnersAndLosersAnalystResponse",
+        "description": "Response for top winners and losers statistics by analyst"
+      },
+      "TopWinnersAndLosersAnalystStats": {
+        "properties": {
+          "primary_analyst": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Primary Analyst",
+            "description": "Primary Demo Analyst, Name"
+          },
+          "primary_analyst_avatar": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Primary Analyst Avatar",
+            "description": "Primary Demo Analyst, avatar"
+          },
+          "secondary_analyst": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Secondary Analyst",
+            "description": "Secondary Demo Analyst, Name"
+          },
+          "secondary_analyst_avatar": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Secondary Analyst Avatar",
+            "description": "Secondary Demo Analyst, avatar"
+          },
+          "cumulative_pnl_percent_nav": {
+            "type": "number",
+            "title": "Cumulative Pnl Percent Nav",
+            "description": "PnL for the period (as a percentage of NAV)"
+          },
+          "company_security_code_portfolio_asset_class": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Company Security Code Demo Asset Class",
+            "description": "Company security code combined with Demo asset class"
+          },
+          "instrument_security_code": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Instrument Security Code",
+            "description": "Demo Security Code"
+          },
+          "position_instrument_security_code": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Position Instrument Security Code",
+            "description": "Demo Security code of the instrument that the position is part of"
+          }
+        },
+        "type": "object",
+        "required": [
+          "cumulative_pnl_percent_nav"
+        ],
+        "title": "TopWinnersAndLosersAnalystStats",
+        "description": "Statistics for a single top winner or loser analyst"
+      },
+      "TopWinnersAndLosersInvestmentConfigMetadata": {
+        "properties": {
+          "supported_filters": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Supported Filters",
+            "description": "List of supported filter fields for this endpoint"
+          },
+          "date_range": {
+            "$ref": "#/components/schemas/DateRangeRequest",
+            "description": "Default date range for this endpoint"
+          },
+          "top_n": {
+            "type": "string",
+            "title": "Top N",
+            "description": "Default top_n label"
+          },
+          "supported_top_n": {
+            "items": {
+              "type": "string"
+            },
+            "type": "array",
+            "title": "Supported Top N",
+            "description": "Supported top_n options",
+            "default": [
+              "Top 5",
+              "Top 10",
+              "Top 20",
+              "Show All"
+            ]
+          },
+          "supported_date_ranges": {
+            "items": {
+              "type": "string",
+              "enum": [
+                "YTD",
+                "QTD",
+                "MTD",
+                "WTD",
+                "DTD",
+                "ITD"
+              ]
+            },
+            "type": "array",
+            "title": "Supported Date Ranges",
+            "description": "Supported date range period shortcuts",
+            "default": [
+              "DTD",
+              "WTD",
+              "MTD",
+              "QTD",
+              "YTD",
+              "ITD"
+            ]
+          },
+          "display_name_map": {
+            "additionalProperties": {
+              "type": "string"
+            },
+            "type": "object",
+            "title": "Display Name Map",
+            "description": "Map of column name -> human-readable display name for every metric, dimension, and filter referenced by this card. Allows the frontend to render headers without calling /catalog. Computed from allowlisted list[str] fields at serialization time.",
+            "readOnly": true
+          }
+        },
+        "type": "object",
+        "required": [
+          "supported_filters",
+          "top_n",
+          "display_name_map"
+        ],
+        "title": "TopWinnersAndLosersInvestmentConfigMetadata",
+        "description": "Configuration metadata specific to Top Winners/Losers Investment endpoint"
+      },
+      "TopWinnersAndLosersInvestmentConfigResponse": {
+        "properties": {
+          "metadata": {
+            "$ref": "#/components/schemas/TopWinnersAndLosersInvestmentConfigMetadata",
+            "description": "Configuration metadata for top winners/losers investment"
+          }
+        },
+        "type": "object",
+        "required": [
+          "metadata"
+        ],
+        "title": "TopWinnersAndLosersInvestmentConfigResponse",
+        "description": "Response for top winners/losers investment configuration endpoint"
+      },
+      "TopWinnersAndLosersInvestmentRequest": {
+        "properties": {
+          "date_range": {
+            "$ref": "#/components/schemas/DateRangeRequest",
+            "description": "Date range for the metrics calculation. Defaults to YTD (January 1st of current year to today in UTC)"
+          },
+          "filters": {
+            "$ref": "#/components/schemas/CommonFilters",
+            "description": "Optional filters to apply"
+          },
+          "top_n": {
+            "type": "string",
+            "enum": [
+              "Top 5",
+              "Top 10",
+              "Top 20",
+              "Show All"
+            ],
+            "title": "Top N",
+            "description": "Top N label ('Top 5', 'Top 10', 'Top 20', 'Show All')",
+            "default": "Top 10"
+          },
+          "result_type": {
+            "anyOf": [
+              {
+                "type": "string",
+                "enum": [
+                  "winners",
+                  "losers"
+                ]
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Result Type",
+            "description": "Filter results by type: 'winners' (positive PnL) or 'losers' (negative PnL). If not specified, returns top N by PnL descending."
+          },
+          "group_by": {
+            "anyOf": [
+              {
+                "items": {
+                  "type": "string",
+                  "enum": [
+                    "company_security_code_portfolio_asset_class",
+                    "instrument_security_code",
+                    "position_instrument_security_code"
+                  ]
+                },
+                "type": "array"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Group By",
+            "description": "Group results by dimensions",
+            "default": [
+              "company_security_code_portfolio_asset_class"
+            ],
+            "openapi_examples": {
+              "company_security_code_portfolio_asset_class": {
+                "description": "Aggregate by company security code Demo asset class",
+                "summary": "Group by company security code Demo asset class",
+                "value": [
+                  "company_security_code_portfolio_asset_class"
+                ]
+              },
+              "instrument_security_code": {
+                "description": "Aggregate by instrument security code",
+                "summary": "Group by instrument security code",
+                "value": [
+                  "instrument_security_code"
+                ]
+              },
+              "position_instrument_security_code": {
+                "description": "Aggregate by position instrument security code",
+                "summary": "Group by position instrument security code",
+                "value": [
+                  "position_instrument_security_code"
+                ]
+              }
+            }
+          },
+          "sort": {
+            "$ref": "#/components/schemas/BaseSortConfig",
+            "description": "Sort configuration for the results"
+          }
+        },
+        "type": "object",
+        "title": "TopWinnersAndLosersInvestmentRequest",
+        "description": "Request for top winners and losers statistics"
+      },
+      "TopWinnersAndLosersInvestmentResponse": {
+        "properties": {
+          "metadata": {
+            "$ref": "#/components/schemas/DataResponseMetadata",
+            "description": "Query metadata (date range, filters applied, etc.)"
+          },
+          "data": {
+            "items": {
+              "$ref": "#/components/schemas/TopWinnersAndLosersInvestmentStats"
+            },
+            "type": "array",
+            "title": "Data",
+            "description": "List of top winners and losers statistics"
+          }
+        },
+        "type": "object",
+        "required": [
+          "metadata",
+          "data"
+        ],
+        "title": "TopWinnersAndLosersInvestmentResponse",
+        "description": "Response for top winners and losers statistics data"
+      },
+      "TopWinnersAndLosersInvestmentStats": {
+        "properties": {
+          "cumulative_pnl_percent_nav": {
+            "type": "number",
+            "title": "Cumulative Pnl Percent Nav",
+            "description": "PnL for the period (as a percentage of NAV)"
+          },
+          "company_security_code_portfolio_asset_class": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Company Security Code Demo Asset Class",
+            "description": "Company security code combined with Demo asset class"
+          },
+          "instrument_security_code": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Instrument Security Code",
+            "description": "Demo Security Code"
+          },
+          "position_instrument_security_code": {
+            "anyOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "null"
+              }
+            ],
+            "title": "Position Instrument Security Code",
+            "description": "Demo Security code of the instrument that the position is part of"
+          }
+        },
+        "type": "object",
+        "required": [
+          "cumulative_pnl_percent_nav"
+        ],
+        "title": "TopWinnersAndLosersInvestmentStats",
+        "description": "Statistics for a single top winner or loser"
+      },
+      "ValidationError": {
+        "properties": {
+          "loc": {
+            "items": {
+              "anyOf": [
+                {
+                  "type": "string"
+                },
+                {
+                  "type": "integer"
+                }
+              ]
+            },
+            "type": "array",
+            "title": "Location"
+          },
+          "msg": {
+            "type": "string",
+            "title": "Message"
+          },
+          "type": {
+            "type": "string",
+            "title": "Error Type"
+          }
+        },
+        "type": "object",
+        "required": [
+          "loc",
+          "msg",
+          "type"
+        ],
+        "title": "ValidationError"
+      }
+    }
+  }
+}

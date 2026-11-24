@@ -1,0 +1,71 @@
+.wrapper :global(.rbc-month-view) {
+  border: none;
+}
+
+.wrapper :global(.rbc-header) {
+  background-color: transparent;
+  text-align: left;
+  border: none !important;
+  padding-bottom: 2px;
+}
+
+.wrapper :global(.rbc-month-row) {
+  border: 0.5px solid #404040 !important;
+  /* border-radius: 8px; */
+}
+
+.wrapper :global(.rbc-month-row:nth-child(2)) {
+  border-top-left-radius: 8px !important;
+  border-top-right-radius: 8px !important;
+}
+
+.wrapper :global(.rbc-month-row:last-of-type) {
+  border-bottom-left-radius: 8px !important;
+  border-bottom-right-radius: 8px !important;
+}
+
+.wrapper :global(.rbc-day-bg) {
+  /* padding: 6px 4px !important; */
+  border-left: 1px solid #404040 !important;
+}
+
+.wrapper :global(.rbc-date-cell) {
+  padding: 6px 4px;
+}
+
+.wrapper :global(.rbc-row) {
+  padding: 0 4px;
+}
+
+.wrapper :global(.rbc-off-range-bg) {
+  background-color: #171717;
+}
+
+.wrapper :global(.rbc-today) {
+  background-color: transparent;
+  border: 1px solid #fafafa !important;
+}
+
+.wrapper :global(.rbc-show-more) {
+  color: #fafafa;
+}
+
+/* custom event  */
+.wrapper :global(.rbc-event) {
+  padding: 0 !important;
+  border-radius: 5px;
+  border: none !important;
+  margin-bottom: 0.1rem;
+}
+
+.wrapper :global(.rbc-event-label) {
+  display: none !important;
+}
+
+.wrapper :global(.rbc-event-content) {
+  border-radius: 5px;
+}
+
+.wrapper :global(.rbc-show-more) {
+  background-color: transparent;
+}

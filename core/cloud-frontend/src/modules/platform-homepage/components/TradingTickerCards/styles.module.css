@@ -1,0 +1,26 @@
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.tickerContainer {
+  display: flex;
+  gap: 0.75rem;
+  overflow: hidden;
+  flex: 1;
+}
+
+.tickerWrapper {
+  display: flex;
+  gap: 0.75rem;
+  animation: scroll 60s linear infinite;
+  min-width: fit-content;
+}
+
+.tickerWrapper:hover {
+  animation-play-state: paused;
+}

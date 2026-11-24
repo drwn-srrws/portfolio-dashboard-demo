@@ -1,0 +1,15 @@
+export enum RoleKinds {
+  PortfolioManager = "Portfolio Manager",
+  PortfolioManagerReadOnly = "Portfolio Manager Read-Only",
+  Analyst = "Analyst",
+  ResearchAnalyst = "Research Analyst",
+  Admin = "Admin",
+  ExternalBetaUser = "External Beta User",
+  MedtechResearchAnalyst = "Medtech Research Analyst",
+  OperationsUser = "Operations User",
+  Specialist = "Specialist",
+  CoverageMonitorBetaUser = "Coverage Monitor Beta User",
+  Assistant = "Assistant",
+  PrivatePortfolioUser = "Private Portfolio User",
+  CoAnalyst = "CO Analyst",
+}
