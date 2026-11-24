@@ -26,3 +26,15 @@ AG Grid Enterprise runs in trial mode and may display a watermark.
 - `backend/src/portfolio` contains the NestJS controller, request validation, and calculations for exposure, P&L, and trade statistics.
 - `backend/src/portfolio/data.ts` defines two fictional funds and a simulated benchmark. The client portfolio endpoint uses Frankfurter exchange rates and falls back to a local snapshot.
 - `backend/src/main.ts` starts the application. [Swagger UI](http://127.0.0.1:8000/docs) documents the available API endpoints.
+
+## Live demo
+
+[Open the dashboards](https://drwn-srrws.github.io/portfolio-dashboard-demo/).
+
+GitHub Pages serves the frontend. The site runs the same portfolio calculations in your browser using simulated holdings. To build this version locally after installing both sets of dependencies, run:
+
+```sh
+npm run build --prefix core/cloud-frontend -- --mode pages
+node backend/browser/build.mjs
+npm run preview --prefix core/cloud-frontend
+```
